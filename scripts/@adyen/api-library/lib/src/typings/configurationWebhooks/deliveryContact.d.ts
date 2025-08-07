@@ -1,0 +1,35 @@
+import { DeliveryAddress } from './deliveryAddress';
+import { Name } from './name';
+import { PhoneNumber } from './phoneNumber';
+export declare class DeliveryContact {
+    'address': DeliveryAddress;
+    /**
+    * The company name of the contact.
+    */
+    'company'?: string;
+    /**
+    * The email address of the contact.
+    */
+    'email'?: string;
+    /**
+    * The full phone number of the contact provided as a single string. It will be handled as a landline phone. **Examples:** \"0031 6 11 22 33 44\", \"+316/1122-3344\", \"(0031) 611223344\"
+    */
+    'fullPhoneNumber'?: string;
+    'name': Name;
+    'phoneNumber'?: PhoneNumber | null;
+    /**
+    * The URL of the contact\'s website.
+    */
+    'webAddress'?: string;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import{GiftcardNumberField as r}from"./GiftcardNumberField.js";import{GiftcardPinField as t}from"./GiftcardPinField.js";const i=i=>{const{setRootNode:s,pinRequired:a}=i;return e("div",{ref:s,className:"adyen-checkout__field-wrapper"},e(r,{...i,classNameModifiers:a?["70"]:["100"]}),a&&e(t,{...i,classNameModifiers:["30"]}))};export{i as GiftCardFields};
+//# sourceMappingURL=GiftcardFields.js.map

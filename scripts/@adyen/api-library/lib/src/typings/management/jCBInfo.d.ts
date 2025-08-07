@@ -1,0 +1,34 @@
+import { TransactionDescriptionInfo } from './transactionDescriptionInfo';
+export declare class JCBInfo {
+    /**
+    * MID (Merchant ID) number. Required for merchants operating in Japan or merchants operating in Canada, Australia and New Zealand when requesting `gatewayContract` or `paymentDesignatorContract` service levels.Format: 14 numeric characters for Japan, 10 numeric characters for Canada, Australia and New Zealand.
+    */
+    'midNumber'?: string;
+    /**
+    * Indicates whether the JCB Merchant ID is reused from a previously setup JCB payment method.  The default value is **false**.For merchants operating in Japan, this field is required and must be set to **true**.
+    */
+    'reuseMidNumber'?: boolean;
+    /**
+    * Specifies the service level (settlement type) of this payment method. Required for merchants operating in Japan. Possible values: * **noContract**: Adyen holds the contract with JCB for merchants operating in Japan or American Express for merchants operating in Canada, Australia and New Zealand. * **gatewayContract**: JCB or American Express receives the settlement and handles disputes, then pays out to you or your sub-merchant directly. * **paymentDesignatorContract**: Available only for merchants operating in Canada, Australia and New Zealand. Adyen receives the settlement, and handles disputes and payouts.
+    */
+    'serviceLevel'?: JCBInfo.ServiceLevelEnum;
+    'transactionDescription'?: TransactionDescriptionInfo | null;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
+export declare namespace JCBInfo {
+    enum ServiceLevelEnum {
+        NoContract = "noContract",
+        GatewayContract = "gatewayContract",
+        PaymentDesignatorContract = "paymentDesignatorContract"
+    }
+}

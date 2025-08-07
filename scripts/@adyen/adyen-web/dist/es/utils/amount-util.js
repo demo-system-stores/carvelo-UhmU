@@ -1,0 +1,2 @@
+import r from"./constants/currency-decimals.js";import{currencyMinorUnitsConfig as t}from"./constants/currency-minor-units.js";const n=t=>r[t]||100,c=(r,t)=>{const c=n(t);return parseInt(String(r),10)/c},e=(r,n,e,o={})=>{const s=r.toString(),i=c(s,e),u=n.replace("_","-"),y={style:"currency",currency:e,currencyDisplay:"symbol",...t[e]?{...o,...t[e]}:o};try{return i.toLocaleString(u,y)}catch(r){return s}};export{c as getDecimalAmount,n as getDivider,e as getLocalisedAmount};
+//# sourceMappingURL=amount-util.js.map

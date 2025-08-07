@@ -1,0 +1,2 @@
+import{createElement as o}from"../../../external/preact/dist/preact.js";import{useCoreContext as r}from"../../../core/Context/CoreProvider.js";import t from"../../internal/Voucher/Voucher.js";import e from"../../../core/Context/useImage.js";import{extractCommonPropsForVoucher as n}from"../../internal/Voucher/utils.js";const a=a=>{const{i18n:i}=r(),s=e();return o(t,{...n({props:a,i18n:i,introKey:"bacs.result.introduction",getImage:s()}),downloadUrl:a.url,downloadButtonText:i.get("download.pdf")})};export{a as default};
+//# sourceMappingURL=BacsResult.js.map

@@ -1,0 +1,2 @@
+import{ENCRYPTED_PWD_FIELD as e,ENCRYPTED_SECURITY_CODE as a,ENCRYPTED_EXPIRY_YEAR as s,ENCRYPTED_EXPIRY_MONTH as r,ENCRYPTED_EXPIRY_DATE as t,ENCRYPTED_CARD_NUMBER as c}from"../../../constants.js";import{getPreviousTabbableNonSFElement as o}from"./utils.js";function i(i,n,l){let b,d;switch(i){case c:b=o(c,n);break;case t:case r:d=c;break;case s:d=r;break;case a:d=l?s:t;break;case e:b=o(i,n)}return{fieldToFocus:d,additionalField:b}}export{i as shiftTabKCP};
+//# sourceMappingURL=tabScenarioKCP.js.map

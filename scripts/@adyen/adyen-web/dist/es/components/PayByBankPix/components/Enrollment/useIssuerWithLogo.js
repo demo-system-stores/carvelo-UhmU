@@ -1,0 +1,2 @@
+import{useState as t,useEffect as o}from"../../../../external/preact/hooks/dist/hooks.js";import e from"../../../../utils/get-issuer-image.js";import{useCoreContext as r}from"../../../../core/Context/CoreProvider.js";import s from"../../../../core/Context/useImage.js";const i=({issuers:i,txVariant:n})=>{const{loadingContext:a}=r(),m=s(),[c,f]=t(i);return o((()=>{if(i?.length>0){const t=e({loadingContext:a},n,m);f(i.map((o=>({...o,icon:t(o.id)}))))}}),[i,n]),c};export{i as useIssuerWithLogo};
+//# sourceMappingURL=useIssuerWithLogo.js.map

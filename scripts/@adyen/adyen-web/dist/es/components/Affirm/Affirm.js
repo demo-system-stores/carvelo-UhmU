@@ -1,0 +1,2 @@
+import e from"../helpers/OpenInvoiceContainer/OpenInvoiceContainer.js";import{ALLOWED_COUNTRIES as r}from"./config.js";import{TxVariants as o}from"../tx-variants.js";class a extends e{formatProps(e){return{...super.formatProps(e),allowedCountries:r,personalDetailsRequiredFields:["firstName","lastName","telephoneNumber","shopperEmail"]}}}var t,i,n;t=a,i="type",n=o.affirm,i in t?Object.defineProperty(t,i,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[i]=n;export{a as default};
+//# sourceMappingURL=Affirm.js.map

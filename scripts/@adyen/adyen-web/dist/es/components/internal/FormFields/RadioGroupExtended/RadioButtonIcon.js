@@ -1,0 +1,2 @@
+import{createElement as a}from"../../../../external/preact/dist/preact.js";import{useState as t}from"../../../../external/preact/hooks/dist/hooks.js";import e from"../../../../_virtual/index.js";const o=({dataValue:o,imageURL:n,altName:r,showRadioIcon:c})=>{const[i,s]=t(!1),d=e({"adyen-checkout__input-icon":!0,"adyen-checkout__input-icon--hidden":!i,"adyen-checkout__input-icon--no-radio-icon":!c});return a("img",{className:d,onError:()=>{s(!1)},onLoad:()=>{s(!0)},alt:r,src:n,"data-value":o})};export{o as default};
+//# sourceMappingURL=RadioButtonIcon.js.map

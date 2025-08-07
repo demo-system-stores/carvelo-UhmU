@@ -1,0 +1,2 @@
+import{AnalyticsEvent as e}from"./AnalyticsEvent.js";import{ANALYTICS_EVENT as r}from"./constants.js";function t(e,r,t){return r in e?Object.defineProperty(e,r,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[r]=t,e}class o extends e{getEventCategory(){return r.error}constructor(e){return super(),t(this,"code",void 0),t(this,"errorType",void 0),t(this,"message",void 0),this.code=e.code,this.errorType=e.errorType,this.message=e.message,this.component=e.component,this}}export{o as AnalyticsErrorEvent};
+//# sourceMappingURL=AnalyticsErrorEvent.js.map

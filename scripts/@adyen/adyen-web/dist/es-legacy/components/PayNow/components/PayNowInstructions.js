@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import{useCoreContext as t}from"../../../core/Context/CoreProvider.js";import r from"../../internal/ContentSeparator/ContentSeparator.js";import{useIsMobile as o}from"../../../utils/useIsMobile.js";const n=()=>{const{i18n:n}=t(),{isMobileScreenSize:i}=o();if(i)return e("div",{className:"adyen-checkout-paynow__instructions"},e(r,null),e("p",null,n.get("paynow.scanQrCode")))};export{n as PayNowInstructions};
+//# sourceMappingURL=PayNowInstructions.js.map

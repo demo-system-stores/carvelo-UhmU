@@ -1,0 +1,2 @@
+import{useCoreContext as e}from"../../../core/Context/CoreProvider.js";import{TimelineWrapper as t}from"../../internal/Timeline/TimelineWrapper.js";import{Timeline as r}from"../../internal/Timeline/Timeline.js";import{createElement as i}from"../../../external/preact/dist/preact.js";const n=()=>{const{i18n:n}=e(),o=n.get("payto.instructions.steps").split("@");return i(t,null,i(r,{instructions:o}))};export{n as PayToInstructions};
+//# sourceMappingURL=PayToInstructions.js.map

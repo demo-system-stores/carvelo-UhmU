@@ -1,0 +1,1 @@
+{"version":3,"file":"defaultProps.js","sources":["../../../../src/components/Ach/defaultProps.ts"],"sourcesContent":["import { AchConfiguration } from './types';\n\nconst defaultProps: AchConfiguration = {\n    hasHolderName: true\n};\n\nexport default defaultProps;\n"],"names":["defaultProps","hasHolderName"],"mappings":"AAEA,MAAMA,EAAiC,CACnCC,eAAe"}

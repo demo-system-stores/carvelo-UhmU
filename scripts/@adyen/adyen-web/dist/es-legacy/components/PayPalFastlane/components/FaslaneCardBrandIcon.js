@@ -1,0 +1,2 @@
+import{createElement as r}from"../../../external/preact/dist/preact.js";import t from"../../../core/Context/useImage.js";import a from"../../internal/Img/Img.js";import{getFullBrandName as e}from"../../Card/components/CardInput/utils.js";const n=({brand:n})=>{const s=t(),o=function(r){return"mastercard"===r?"mc":r}(n);return r("span",{className:"adyen-checkout-fastlane__card-brand--wrapper"},r(a,{src:s()(o),alt:e(o)}))};export{n as default};
+//# sourceMappingURL=FaslaneCardBrandIcon.js.map

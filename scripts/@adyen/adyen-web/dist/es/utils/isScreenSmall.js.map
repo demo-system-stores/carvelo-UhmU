@@ -1,0 +1,1 @@
+{"version":3,"file":"isScreenSmall.js","sources":["../../../src/utils/isScreenSmall.ts"],"sourcesContent":["const isScreenSmall = (): boolean => window.matchMedia('(max-width: 480px)').matches;\n\nexport default isScreenSmall;\n"],"names":["isScreenSmall","window","matchMedia","matches"],"mappings":"AAAA,MAAMA,EAAgB,IAAeC,OAAOC,WAAW,sBAAsBC"}

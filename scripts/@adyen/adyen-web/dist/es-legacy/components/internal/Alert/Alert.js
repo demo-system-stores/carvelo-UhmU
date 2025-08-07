@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import a from"../../../_virtual/index.js";import t from"../Icon/Icon.js";function r({children:r,classNames:s=[],type:c="error",icon:o}){return e("div",{className:a("adyen-checkout__alert-message",`adyen-checkout__alert-message--${c}`,s)},o&&e(t,{className:"adyen-checkout__alert-message__icon",type:o}),r)}export{r as default};
+//# sourceMappingURL=Alert.js.map

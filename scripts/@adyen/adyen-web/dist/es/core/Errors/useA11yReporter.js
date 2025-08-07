@@ -1,0 +1,2 @@
+import{useEffect as e}from"../../external/preact/hooks/dist/hooks.js";import s from"./useSRPanelContext.js";const t=t=>{const{srPanel:r}=s();e((()=>(r.setAriaProps({"aria-relevant":"additions text"}),()=>{r.setMessages(null),r.setAriaProps({"aria-relevant":r.constructor.defaultProps.ariaAttributes["aria-relevant"]})})),[]),e((()=>{r.setMessages(t)}),[t])};export{t as useA11yReporter};
+//# sourceMappingURL=useA11yReporter.js.map

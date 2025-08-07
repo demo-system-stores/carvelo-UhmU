@@ -1,0 +1,2 @@
+import{isEmpty as r}from"../../../utils/validator-utils.js";import{SF_ErrorCodes as e}from"../../../core/Errors/constants.js";const a={default:{validate:r=>r&&r.length>0,modes:["blur"],errorMessage:e.ERROR_MSG_INCOMPLETE_FIELD},name:{validate:e=>!r(e)||null,errorMessage:"companyDetails.name.invalid",modes:["blur"]},registrationNumber:{validate:e=>!r(e)||null,errorMessage:"companyDetails.registrationNumber.invalid",modes:["blur"]}};export{a as companyDetailsValidationRules};
+//# sourceMappingURL=validate.js.map

@@ -1,0 +1,2 @@
+import{addErrorTranslationsToObject as t}from"../../../../../../core/Errors/utils.js";import r from"../../utilities/addContextTranslations.js";import{SF_FIELDS_MAP as e}from"../../constants.js";function i(i,a,o,l){const s=["ach","giftcard"].includes(i)?i:"creditCard",n=o.get(`${s}.${a}.aria.iframeTitle`),c=o.get(`${s}.${e[a]}.label`),m=o.locale;let f=t({iframeTitle:n,label:c},o,a);return l&&(f=r(f,o,i,a)),{...m&&{lang:m},[a]:f}}export{i as processAriaConfig};
+//# sourceMappingURL=processAriaConfig.js.map

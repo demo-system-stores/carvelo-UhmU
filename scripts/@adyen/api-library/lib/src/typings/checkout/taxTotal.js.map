@@ -1,0 +1,1 @@
+{"version":3,"file":"taxTotal.js","sourceRoot":"","sources":["../../../../src/typings/checkout/taxTotal.ts"],"names":[],"mappings":";AAAA;;;;;;;GAOG;;;AAIH,MAAa,QAAQ;IAYjB,MAAM,CAAC,mBAAmB;QACtB,OAAO,QAAQ,CAAC,gBAAgB,CAAC;IACrC,CAAC;;AAdL,4BAeC;AAZU,sBAAa,GAAuB,SAAS,CAAC;AAE9C,yBAAgB,GAA0D;IAC7E;QACI,MAAM,EAAE,QAAQ;QAChB,UAAU,EAAE,QAAQ;QACpB,MAAM,EAAE,eAAe;KAC1B;CAAK,CAAC"}

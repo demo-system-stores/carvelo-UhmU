@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import{useCoreContext as t}from"../../../core/Context/CoreProvider.js";import o from"../../../core/Context/useImage.js";import r from"../../internal/Img/Img.js";const a=()=>{const{i18n:a}=t(),n=o();return e("div",{className:"adyen-checkout__eftpad-canada-info"},e(r,{height:"18",width:"18",src:n({imageFolder:"components/"})("info_black"),alt:"",ariaHidden:!0}),e("div",null,a.get("eftpad-canada.settlement-info")))};export{a as SettlementInfo};
+//# sourceMappingURL=SettlementInfo.js.map

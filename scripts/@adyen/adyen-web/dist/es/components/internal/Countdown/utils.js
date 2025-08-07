@@ -1,0 +1,2 @@
+const e=(e,t=2)=>{if(0===t)return e;const n=String(e);return n.length>=t?n:("0".repeat(t)+n).slice(-1*t)},t=(e,t,n)=>{const r=n.getTime()-e.getTime();return 100-Math.round(100*(t.getTime()-e.getTime())/r)},n=(n,r)=>{const o=new Date,i=r.getTime()-o.getTime(),g=i/1e3,c=t(n,o,r);return{total:i,minutes:e(Math.floor(g/60%60)),seconds:e(Math.floor(g%60)),completed:i<=0,percentage:c}};export{t as getProgressPercentage,n as getTimeDifference,e as zeroPad};
+//# sourceMappingURL=utils.js.map

@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import t from"../../../_virtual/index.js";import a from"../../../core/Context/useImage.js";const o=({type:o,className:r="",alt:i="",height:s,width:c})=>{var m;const n=null===(m=a()({imageFolder:"components/"}))||void 0===m?void 0:m(o);return e("img",{className:t("adyen-checkout__icon",r),alt:i,src:n,height:s,width:c})};export{o as default};
+//# sourceMappingURL=Icon.js.map

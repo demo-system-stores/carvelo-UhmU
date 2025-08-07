@@ -1,0 +1,2 @@
+function e(e){const r={mc:"masterCard",amex:"amex",visa:"visa",elodebit:"elo",elo:"elo",interac:"interac",discover:"discover",jcb:"jcb",electron:"electron",maestro:"maestro",girocard:"girocard",cartebancaire:"cartesBancaires",eftpos_australia:"eftpos"};return e.reduce(((e,a)=>(r[a]&&!e.includes(r[a])&&e.push(r[a]),e)),[])}export{e as mapBrands};
+//# sourceMappingURL=map-adyen-brands-to-applepay-brands.js.map

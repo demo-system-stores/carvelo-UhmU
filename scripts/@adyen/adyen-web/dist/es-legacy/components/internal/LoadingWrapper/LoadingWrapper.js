@@ -1,0 +1,2 @@
+import{createElement as i}from"../../../external/preact/dist/preact.js";import n from"../../../_virtual/index.js";import t from"../Spinner/Spinner.js";const e=({children:e,status:a})=>{const o=n("adyen-checkout__loading-input__form","loading-input__form",{"loading-input__form--loading":"loading"===a}),r=n({"loading-input__spinner":!0,"loading-input__spinner--active":"loading"===a});return i("div",{style:{position:"relative"}},i("div",{className:r},i(t,null)),i("div",{className:o},e))};export{e as default};
+//# sourceMappingURL=LoadingWrapper.js.map

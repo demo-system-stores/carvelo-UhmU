@@ -1,0 +1,2 @@
+import{httpPost as t}from"../http.js";import{API_VERSION as e,API_ERROR_CODE as a}from"./constants.js";function o(o,n){const s=`${e}/sessions/${n.id}/paymentDetails?clientKey=${n.clientKey}`,i={...n.data&&{sessionData:n.data},...o};return t({loadingContext:n.loadingContext,path:s,errorLevel:"fatal",errorCode:a.submitPaymentDetails},i)}export{o as default};
+//# sourceMappingURL=submit-details.js.map

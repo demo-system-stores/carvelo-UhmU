@@ -1,0 +1,2 @@
+import{ENCRYPTED_SECURITY_CODE as e,ENCRYPTED_EXPIRY_YEAR as s,ENCRYPTED_EXPIRY_MONTH as a,ENCRYPTED_EXPIRY_DATE as t,ENCRYPTED_CARD_NUMBER as o}from"../../../constants.js";import{getPreviousTabbableNonSFElement as r}from"./utils.js";function c(c,i,n,l){let d,f;switch(c){case o:d=r(o,i);break;case t:case a:f=o;break;case s:f=a;break;case e:1===l?d=r(e,i):f=n?s:t}return{fieldToFocus:f,additionalField:d}}export{c as shiftTabCreditCard};
+//# sourceMappingURL=tabScenarioCreditCard.js.map

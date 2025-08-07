@@ -1,0 +1,2 @@
+import r from"../helpers/QRLoaderContainer/QRLoaderContainer.js";import{countdownTime as e,delay as o}from"./config.js";import{TxVariants as t}from"../tx-variants.js";class a extends r{formatProps(r){return{delay:o,countdownTime:e,...super.formatProps(r)}}}var n,p,i;n=a,p="type",i=t.promptpay,p in n?Object.defineProperty(n,p,{value:i,enumerable:!0,configurable:!0,writable:!0}):n[p]=i;export{a as default};
+//# sourceMappingURL=PromptPay.js.map

@@ -1,0 +1,2 @@
+import e from"../utils/iframes/postMessageToIframe.js";import{hasOwnProperty as t}from"../../../../../../utils/hasOwnProperty.js";import s from"../utils/iframes/getIframeContentWin.js";function r({csfState:r,csfConfig:i},o,f){if(!t(r.securedFields,o))return;const n={txVariant:r.type,fieldType:o,focus:!0,numKey:r.securedFields[o].numKey};e(n,s(r,o),i.loadingContext)}export{r as setFocusOnFrame};
+//# sourceMappingURL=setFocusOnFrame.js.map

@@ -1,0 +1,38 @@
+import Service from "../../service";
+import Client from "../../client";
+import { TransactionRule, TransactionRuleInfo, TransactionRuleResponse } from "../../typings/balancePlatform/models";
+import { IRequest } from "../../typings/requestOptions";
+export declare class TransactionRulesApi extends Service {
+    private readonly API_BASEPATH;
+    private baseUrl;
+    constructor(client: Client);
+    /**
+    * @summary Create a transaction rule
+    * @param transactionRuleInfo {@link TransactionRuleInfo }
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link TransactionRule }
+    */
+    createTransactionRule(transactionRuleInfo: TransactionRuleInfo, requestOptions?: IRequest.Options): Promise<TransactionRule>;
+    /**
+    * @summary Delete a transaction rule
+    * @param transactionRuleId {@link string } The unique identifier of the transaction rule.
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link TransactionRule }
+    */
+    deleteTransactionRule(transactionRuleId: string, requestOptions?: IRequest.Options): Promise<TransactionRule>;
+    /**
+    * @summary Get a transaction rule
+    * @param transactionRuleId {@link string } The unique identifier of the transaction rule.
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link TransactionRuleResponse }
+    */
+    getTransactionRule(transactionRuleId: string, requestOptions?: IRequest.Options): Promise<TransactionRuleResponse>;
+    /**
+    * @summary Update a transaction rule
+    * @param transactionRuleId {@link string } The unique identifier of the transaction rule.
+    * @param transactionRuleInfo {@link TransactionRuleInfo }
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link TransactionRule }
+    */
+    updateTransactionRule(transactionRuleId: string, transactionRuleInfo: TransactionRuleInfo, requestOptions?: IRequest.Options): Promise<TransactionRule>;
+}

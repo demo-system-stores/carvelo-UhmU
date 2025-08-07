@@ -1,0 +1,2 @@
+import{createElement as e,Fragment as l}from"../../../external/preact/dist/preact.js";import a from"../FormFields/Fieldset/Fieldset.js";const r=({data:r})=>{const{firstName:t,lastName:s,shopperEmail:n,telephoneNumber:o}=r;return e(a,{classNameModifiers:["personalDetails"],label:"personalDetails",readonly:!0},t&&`${t} `,s&&`${s} `,n&&e(l,null,e("br",null),n),o&&e(l,null,e("br",null),o))};export{r as default};
+//# sourceMappingURL=ReadOnlyPersonalDetails.js.map

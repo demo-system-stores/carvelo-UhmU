@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/PayNow/config.ts"],"sourcesContent":["export const countdownTime = 3; // min\nexport const delay = 2000; // ms\n\nexport default {\n    delay,\n    countdownTime\n};\n"],"names":["countdownTime","delay"],"mappings":"AAAaA,MAAAA,EAAgB,EAChBC,EAAQ"}

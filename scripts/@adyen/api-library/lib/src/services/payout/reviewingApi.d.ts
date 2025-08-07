@@ -1,0 +1,23 @@
+import Service from "../../service";
+import Client from "../../client";
+import { ModifyRequest, ModifyResponse } from "../../typings/payout/models";
+import { IRequest } from "../../typings/requestOptions";
+export declare class ReviewingApi extends Service {
+    private readonly API_BASEPATH;
+    private baseUrl;
+    constructor(client: Client);
+    /**
+    * @summary Confirm a payout
+    * @param modifyRequest {@link ModifyRequest }
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link ModifyResponse }
+    */
+    confirmThirdParty(modifyRequest: ModifyRequest, requestOptions?: IRequest.Options): Promise<ModifyResponse>;
+    /**
+    * @summary Cancel a payout
+    * @param modifyRequest {@link ModifyRequest }
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link ModifyResponse }
+    */
+    declineThirdParty(modifyRequest: ModifyRequest, requestOptions?: IRequest.Options): Promise<ModifyResponse>;
+}

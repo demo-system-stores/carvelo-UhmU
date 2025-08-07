@@ -1,0 +1,2 @@
+import{COUNTRIES_WITH_CUSTOM_SPECIFICATION as s,STREET as e,COUNTRY as r,POSTAL_CODE as t}from"../internal/Address/constants.js";const a={labels:{[e]:"address"},schema:[e,[[r,70],[t,30]]]},d=["ID","PH","TH","VN","JP","TW","KR","SG","MY","HK"],n=s.reduce(((s,e)=>({...s,[e]:a})),{default:a});export{d as ATOME_SUPPORTED_COUNTRIES,n as BILLING_ADDRESS_SPECIFICATION};
+//# sourceMappingURL=config.js.map

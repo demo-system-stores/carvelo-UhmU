@@ -1,0 +1,2 @@
+import{TxVariants as e}from"../tx-variants.js";import t from"../Redirect/Redirect.js";function r(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}class i extends t{formatData(){return{paymentMethod:{type:this.type,subtype:"redirect"},browserInfo:this.browserInfo}}}r(i,"type",e.riverty),r(i,"defaultProps",{type:e.riverty});export{i as default};
+//# sourceMappingURL=Riverty.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/Affirm/config.ts"],"sourcesContent":["export const ALLOWED_COUNTRIES = ['CA', 'US'];\n"],"names":["ALLOWED_COUNTRIES"],"mappings":"MAAaA,EAAoB,CAAC,KAAM"}

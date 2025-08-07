@@ -1,0 +1,2 @@
+import{createElement as t}from"../../../external/preact/dist/preact.js";import{useCoreContext as o}from"../../../core/Context/CoreProvider.js";function e(e){const{i18n:n}=o();return t("button",{type:"button",className:"adyen-checkout__button  adyen-checkout__button--ghost adyen-checkout__amazonpay__button--signOut",onClick:()=>{new Promise(e.onSignOut).then((()=>{e.amazonRef.Pay.signout()})).catch(console.error)}},n.get("amazonpay.signout"))}export{e as default};
+//# sourceMappingURL=SignOutButton.js.map

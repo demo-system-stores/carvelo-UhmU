@@ -1,0 +1,2 @@
+import{telephoneNumber as e}from"../../utils/regex.js";const t={telephoneNumber:[{validate:e=>!!e&&e.length<=11,errorMessage:"voucher.econtext.telephoneNumber.invalid",modes:["input","blur"]},{validate:t=>!!t&&e.test(t)&&(10===t.length||11===t.length),errorMessage:"voucher.econtext.telephoneNumber.invalid",modes:["blur"]}]};export{t as econtextValidationRules};
+//# sourceMappingURL=validate.js.map

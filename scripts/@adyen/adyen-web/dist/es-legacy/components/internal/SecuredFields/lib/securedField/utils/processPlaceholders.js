@@ -1,0 +1,2 @@
+import{SF_FIELDS_MAP as i,ENCRYPTED_SECURITY_CODE as o,ENCRYPTED_SECURITY_CODE_4_DIGITS as r,ENCRYPTED_SECURITY_CODE_3_DIGITS as t,GIFT_CARD as n}from"../../constants.js";function u(u,e,l){var s,d,v,c;return u===n?{[e]:null!==(s=l[i[e]])&&void 0!==s?s:""}:e===o?{[t]:null!==(d=l.securityCodeThreeDigits)&&void 0!==d?d:"",[r]:null!==(v=l.securityCodeFourDigits)&&void 0!==v?v:""}:{[e]:null!==(c=l[i[e]])&&void 0!==c?c:""}}export{u as processPlaceholders};
+//# sourceMappingURL=processPlaceholders.js.map

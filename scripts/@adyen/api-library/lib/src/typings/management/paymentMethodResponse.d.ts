@@ -1,0 +1,113 @@
+import { PaginationLinks } from './paginationLinks';
+import { PaymentMethod } from './paymentMethod';
+export declare class PaymentMethodResponse {
+    '_links'?: PaginationLinks | null;
+    /**
+    * The list of supported payment methods and their details.
+    */
+    'data'?: Array<PaymentMethod>;
+    /**
+    * Total number of items.
+    */
+    'itemsTotal': number;
+    /**
+    * Total number of pages.
+    */
+    'pagesTotal': number;
+    /**
+    * Payment method types with errors.
+    */
+    'typesWithErrors'?: Array<PaymentMethodResponse.TypesWithErrorsEnum>;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
+export declare namespace PaymentMethodResponse {
+    enum TypesWithErrorsEnum {
+        Accel = "accel",
+        Ach = "ach",
+        Affirm = "affirm",
+        Afterpaytouch = "afterpaytouch",
+        Alelo = "alelo",
+        Alipay = "alipay",
+        AlipayHk = "alipay_hk",
+        AlipayWap = "alipay_wap",
+        Amex = "amex",
+        Applepay = "applepay",
+        BaneseCard = "banese_card",
+        BaneseCardCredit = "banese_card_credit",
+        BaneseCardDebit = "banese_card_debit",
+        BaneseCardPrepaid = "banese_card_prepaid",
+        Bcmc = "bcmc",
+        Blik = "blik",
+        Cartebancaire = "cartebancaire",
+        Clearpay = "clearpay",
+        Clicktopay = "clicktopay",
+        Credtodos = "credtodos",
+        CredtodosPrivateCredit = "credtodos_private_credit",
+        CredtodosPrivateDebit = "credtodos_private_debit",
+        Cup = "cup",
+        Diners = "diners",
+        DirectdebitGb = "directdebit_GB",
+        Discover = "discover",
+        EbankingFi = "ebanking_FI",
+        EftDirectdebitCa = "eft_directdebit_CA",
+        EftposAustralia = "eftpos_australia",
+        Elo = "elo",
+        Elocredit = "elocredit",
+        Elodebit = "elodebit",
+        Girocard = "girocard",
+        Googlepay = "googlepay",
+        Hiper = "hiper",
+        Hipercard = "hipercard",
+        Ideal = "ideal",
+        InteracCard = "interac_card",
+        Jcb = "jcb",
+        Klarna = "klarna",
+        KlarnaAccount = "klarna_account",
+        KlarnaPaynow = "klarna_paynow",
+        Maestro = "maestro",
+        Mbway = "mbway",
+        Mc = "mc",
+        Mcdebit = "mcdebit",
+        MealVoucherFr = "mealVoucher_FR",
+        Mobilepay = "mobilepay",
+        Multibanco = "multibanco",
+        Nyce = "nyce",
+        OnlineBankingPl = "onlineBanking_PL",
+        Paybybank = "paybybank",
+        PaybybankPlaid = "paybybank_plaid",
+        Payme = "payme",
+        PaymePos = "payme_pos",
+        Paynow = "paynow",
+        PaynowPos = "paynow_pos",
+        Paypal = "paypal",
+        Payto = "payto",
+        Pulse = "pulse",
+        Sodexo = "sodexo",
+        Star = "star",
+        Swish = "swish",
+        Ticket = "ticket",
+        TodoGiftcard = "todo_giftcard",
+        Trustly = "trustly",
+        Twint = "twint",
+        TwintPos = "twint_pos",
+        UpBrazilCredit = "up_brazil_credit",
+        ValeRefeicao = "vale_refeicao",
+        ValeRefeicaoPrepaid = "vale_refeicao_prepaid",
+        Vipps = "vipps",
+        Visa = "visa",
+        Visadebit = "visadebit",
+        Vpay = "vpay",
+        Wechatpay = "wechatpay",
+        WechatpayPos = "wechatpay_pos"
+    }
+}

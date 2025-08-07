@@ -1,0 +1,2 @@
+import{CASHAPPPAY_PROD_SDK as i,CASHAPPPAY_SANDBOX_SDK as s}from"./config.js";import o from"../../../utils/Script.js";class n{isSdkIsAvailableOnWindow(){return!!window.CashApp}async load(n){const a=n.toLowerCase().includes("live")?i:s;if(!this.isSdkIsAvailableOnWindow()){const i=new o(a);await i.load()}return window.CashApp}}export{n as CashAppSdkLoader};
+//# sourceMappingURL=CashAppSdkLoader.js.map

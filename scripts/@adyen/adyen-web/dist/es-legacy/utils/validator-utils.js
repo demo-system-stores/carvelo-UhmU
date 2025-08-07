@@ -1,0 +1,2 @@
+const l=(l,n,t,r)=>{var e,o,i,u;if(null===(o=l[t])||void 0===o||null===(e=o[n])||void 0===e?void 0:e.formatterFn)return null;const v=null===(u=l[t])||void 0===u||null===(i=u[n])||void 0===i?void 0:i.maxlength;return v||30},n=l=>!(null!=l&&!/^[\s]*$/.test(l)),t="?\\+_=!@#$%^&*(){}~<>\\[\\]\\\\",r=(l,n="g")=>new RegExp(`[${l}]`,n),e=l=>l.trimStart().replace(/\s+/g," ");export{t as SPECIAL_CHARS,r as getFormattingRegEx,l as getMaxLengthByFieldAndCountry,n as isEmpty,e as trimValWithOneSpace};
+//# sourceMappingURL=validator-utils.js.map

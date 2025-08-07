@@ -1,0 +1,2 @@
+function i(i,s,e){return s in i?Object.defineProperty(i,s,{value:e,enumerable:!0,configurable:!0,writable:!0}):i[s]=e,i}class s{hasError(i=!1){return i?!this.isValid&&this.shouldValidate:null!=this.isValid&&!this.isValid&&this.shouldValidate}constructor(s,e,t,a){i(this,"shouldValidate",void 0),i(this,"isValid",void 0),i(this,"errorMessage",void 0),this.shouldValidate=s.modes.includes(t),this.isValid=s.validate(e,a),this.errorMessage=s.errorMessage}}export{s as ValidationRuleResult};
+//# sourceMappingURL=ValidationRuleResult.js.map

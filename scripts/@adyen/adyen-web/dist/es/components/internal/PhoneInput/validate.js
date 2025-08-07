@@ -1,0 +1,2 @@
+import{isEmpty as e,getFormattingRegEx as r}from"../../../utils/validator-utils.js";const o=/\b(2\d{1}|(9(3|6|2|1)))\d{7}\b/,t=/^(\d){4,}$/,a={phoneNumber:{modes:["blur"],validate:(r,a)=>{const d="+351"===a.state.data.phonePrefix?o:t;return e(r)?null:d.test(r)},errorMessage:"invalidPhoneNumber"},phonePrefix:{modes:["blur"],validate:e=>!!e,errorMessage:"invalidCountryCode"}},d={phoneNumber:{formatterFn:e=>e.replace(r("^\\d","g"),"")}};export{d as phoneFormatters,a as phoneValidationRules};
+//# sourceMappingURL=validate.js.map

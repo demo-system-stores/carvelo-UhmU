@@ -1,0 +1,1 @@
+{"version":3,"file":"constants.js","sources":["../../../src/language/constants.ts"],"sourcesContent":["export const DEFAULT_LOCALE = 'en-US';\n"],"names":["DEFAULT_LOCALE"],"mappings":"AAAO,MAAMA,EAAiB"}

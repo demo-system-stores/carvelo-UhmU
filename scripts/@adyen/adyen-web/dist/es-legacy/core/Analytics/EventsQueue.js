@@ -1,0 +1,2 @@
+import{httpPost as e}from"../Services/http.js";const t=({analyticsContext:t,clientKey:n,analyticsPath:o})=>{const r={channel:"Web",platform:"Web",info:[],errors:[],logs:[]};return{add:(e,t)=>{r[e].push(t)},run:s=>{const l=(s=>r.info.length||r.logs.length||r.errors.length?e({errorLevel:"silent",loadingContext:t,path:`${o}/${s}?clientKey=${n}`},r).then((()=>{})).catch((()=>{console.debug("### EventsQueue:::: send has failed")})):Promise.resolve(null))(s);return r.info=[],r.errors=[],r.logs=[],l},getQueue:()=>r}};export{t as default};
+//# sourceMappingURL=EventsQueue.js.map

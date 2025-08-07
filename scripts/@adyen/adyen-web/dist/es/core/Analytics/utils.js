@@ -1,0 +1,2 @@
+import{errorCodeMapping as r,ALLOWED_ANALYTICS_DATA as t}from"./constants.js";import{digitsOnlyFormatter as s}from"../../utils/Formatters/formatters.js";import{ERROR_FIELD_REQUIRED as o,ERROR_INVALID_FORMAT_EXPECTS as e}from"../Errors/constants.js";const m=()=>Date.now(),n=(t,m)=>{if(t===o||t===e)return r[`${t}.${m}`]??t;let n=r[t]??t;return isNaN(Number(n))&&(n=s(n)),n},i=r=>Object.keys(r).reduce(((s,o)=>(t.includes(o)&&(s[o]=r[o]),s)),{});export{m as getUTCTimestamp,n as mapErrorCodesForAnalytics,i as processAnalyticsData};
+//# sourceMappingURL=utils.js.map

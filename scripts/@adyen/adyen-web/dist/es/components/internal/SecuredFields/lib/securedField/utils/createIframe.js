@@ -1,0 +1,2 @@
+function t({src:t,title:e="iframe element",policy:r="origin"}){const i=document.createElement("iframe");i.setAttribute("src",t),i.classList.add("js-iframe"),""===e||0===e.trim().length||"none"===e?i.setAttribute("role","presentation"):i.setAttribute("title",e),i.setAttribute("allowtransparency","true"),i.setAttribute("referrerpolicy",r);const s=document.createTextNode("<p>Your browser does not support iframes.</p>");return i.appendChild(s),i}export{t as default};
+//# sourceMappingURL=createIframe.js.map

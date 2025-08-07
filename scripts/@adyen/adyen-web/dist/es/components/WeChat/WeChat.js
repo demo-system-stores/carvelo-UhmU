@@ -1,0 +1,2 @@
+import e from"../helpers/QRLoaderContainer/QRLoaderContainer.js";import{countdownTime as r,delay as a}from"./config.js";import{TxVariants as t}from"../tx-variants.js";function o(e,r,a){return r in e?Object.defineProperty(e,r,{value:a,enumerable:!0,configurable:!0,writable:!0}):e[r]=a,e}class n extends e{formatProps(e){return{delay:a,countdownTime:r,...super.formatProps(e)}}}o(n,"type",t.wechatpayQR),o(n,"txVariants",[t.wechatpay]),o(n,"analyticsType","wechatpayQR");export{n as default};
+//# sourceMappingURL=WeChat.js.map

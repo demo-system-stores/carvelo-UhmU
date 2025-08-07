@@ -1,0 +1,2 @@
+const n={cancelUrl:"undefined"!=typeof window?window.location.href:"",configuration:{},environment:"TEST",locale:"en_GB",placement:"Cart",productType:"PayAndShip",returnUrl:"undefined"!=typeof window?window.location.href:"",showOrderButton:!0,showChangePaymentDetailsButton:!1,showSignOutButton:!1,onClick:n=>n(),onSignOut:n=>n(),isExpress:!1};export{n as default};
+//# sourceMappingURL=defaultProps.js.map

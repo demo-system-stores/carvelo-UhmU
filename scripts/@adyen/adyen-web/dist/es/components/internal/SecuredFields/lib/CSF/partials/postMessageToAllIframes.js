@@ -1,0 +1,2 @@
+import e from"../utils/iframes/postMessageToIframe.js";import t from"../utils/iframes/getIframeContentWin.js";function s({csfState:s,csfConfig:r},n){const o=Object.keys(n||{});if(!o.length)return!1;return Object.keys(s.securedFields).forEach((i=>{const f={txVariant:s.type,fieldType:i,numKey:s.securedFields[i].numKey};o.forEach((e=>{f[e]=n[e]})),e(f,t(s,i),r.loadingContext)})),!0}export{s as postMessageToAllIframes};
+//# sourceMappingURL=postMessageToAllIframes.js.map

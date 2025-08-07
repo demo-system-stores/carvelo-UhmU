@@ -1,0 +1,2 @@
+import e from"../helpers/QRLoaderContainer/QRLoaderContainer.js";import{TxVariants as r}from"../tx-variants.js";class s extends e{formatProps(e){return{delay:2e3,countdownTime:3,instructions:"swish.pendingMessage",...super.formatProps(e)}}}var t,a,o;t=s,a="type",o=r.swish,a in t?Object.defineProperty(t,a,{value:o,enumerable:!0,configurable:!0,writable:!0}):t[a]=o;export{s as default};
+//# sourceMappingURL=Swish.js.map

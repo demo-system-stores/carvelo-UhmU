@@ -1,0 +1,2 @@
+import{createElement as e,Fragment as t}from"../../../../external/preact/dist/preact.js";import r from"../../FormFields/Fieldset/Fieldset.js";import{FALLBACK_VALUE as s}from"../constants.js";const a=({data:a,label:o})=>{const{street:l,houseNumberOrName:n,city:m,postalCode:i,stateOrProvince:c,country:d}=a;return e(r,{classNameModifiers:[o],label:o,readonly:!0},e(t,null,!!l&&l,n&&`, ${n},`,e("br",null),i&&`${i}`,m&&`, ${m}`,c&&c!==s&&`, ${c}`,d&&`, ${d} `))};export{a as default};
+//# sourceMappingURL=ReadOnlyAddress.js.map

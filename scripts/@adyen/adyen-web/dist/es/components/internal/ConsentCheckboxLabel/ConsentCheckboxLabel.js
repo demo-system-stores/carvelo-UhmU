@@ -1,0 +1,2 @@
+import{createElement as e,Fragment as r}from"../../../external/preact/dist/preact.js";import{useCoreContext as t}from"../../../core/Context/CoreProvider.js";function a(a){const{i18n:n}=t(),o=n.get("paymentConditions"),c=n.get("afterPay.agreement"),[l,s]=c.split("%@");return l&&s?e(r,null,l,e("a",{className:"adyen-checkout-link",target:"_blank",rel:"noopener noreferrer",href:a.url},o),s):e("span",{className:"adyen-checkout__checkbox__label"},n.get("privacyPolicy"))}export{a as default};
+//# sourceMappingURL=ConsentCheckboxLabel.js.map

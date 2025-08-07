@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/BcmcMobile/config.ts"],"sourcesContent":["export const COUNTDOWN_MINUTES = 15; // min\nexport const STATUS_INTERVAL = 2000; // ms\n\nexport default {\n    STATUS_INTERVAL,\n    COUNTDOWN_MINUTES\n};\n"],"names":["COUNTDOWN_MINUTES","STATUS_INTERVAL"],"mappings":"AAAaA,MAAAA,EAAoB,GACpBC,EAAkB"}

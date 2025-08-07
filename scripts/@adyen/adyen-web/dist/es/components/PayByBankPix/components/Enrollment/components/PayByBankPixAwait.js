@@ -1,0 +1,2 @@
+import{createElement as t}from"../../../../../external/preact/dist/preact.js";import o from"./AwaitLogoContainer.js";import e from"../../../../internal/Await/Await.js";function n(n){return t("div",{className:"adyen-checkout-pay-by-bank-pix-await"},n.logos?.length>0&&t(o,{logos:n.logos}),t(e,{showCountdownTimer:!0,type:n.type,countdownTime:n.countdownTime,clientKey:n.clientKey,onError:n.onError,awaitText:n.awaitText,instructions:n.instructions,pollStatus:n.pollStatus,endSlot:n.endSlot}))}export{n as default};
+//# sourceMappingURL=PayByBankPixAwait.js.map

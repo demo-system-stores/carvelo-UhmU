@@ -1,0 +1,2 @@
+import e from"../utils/userAgent.js";function c({csfState:c,csfProps:t,csfCallbacks:o},r,s){const u={...s};delete u.numKey,u.rootNode=t.rootNode,u.type=c.type;const n=u.fieldType;if(u.focus)c.currentFocusObject!==n&&(c.currentFocusObject=n,e.__IS_IOS&&!c.registerFieldForIos&&r());else{c.currentFocusObject===n&&(c.currentFocusObject=null)}const l=u;l.currentFocusObject=c.currentFocusObject,o.onFocus(l)}export{c as handleFocus};
+//# sourceMappingURL=handleFocus.js.map

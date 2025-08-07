@@ -1,0 +1,2 @@
+function t(){if(!window.crypto)return 4294967296*Math.random()|0;const t=new Uint32Array(1);return window.crypto.getRandomValues(t),t[0]}function n(t,e){const o=typeof t;return t&&e&&"object"===o&&o===typeof e?Object.keys(t).length===Object.keys(e).length&&Object.keys(t).every((o=>n(t[o],e[o]))):t===e}function e(...t){const n=t,e=n.shift();return function(...t){return e.apply(this,n.concat(t))}}export{t as generateRandomNumber,n as objectsDeepEqual,e as partial};
+//# sourceMappingURL=commonUtils.js.map

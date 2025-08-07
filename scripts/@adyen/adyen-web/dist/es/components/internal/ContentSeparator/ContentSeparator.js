@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../external/preact/dist/preact.js";import r from"../../../_virtual/index.js";import{useCoreContext as t}from"../../../core/Context/CoreProvider.js";function o({label:o="qrCodeOrApp",classNames:a=[]}){const{i18n:s}=t();return e("div",{className:r("adyen-checkout__content-separator",...a)},s.get(o))}export{o as default};
+//# sourceMappingURL=ContentSeparator.js.map

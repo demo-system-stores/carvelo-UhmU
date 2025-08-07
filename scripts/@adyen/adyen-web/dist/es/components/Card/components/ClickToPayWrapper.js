@@ -1,0 +1,2 @@
+import o from"../../internal/ClickToPay/context/ClickToPayProvider.js";import t from"./ClickToPayHolder.js";import{createElement as e}from"../../../external/preact/dist/preact.js";const n=({amount:n,configuration:r,clickToPayService:a,setClickToPayRef:i,onSetStatus:c,onSubmit:l,onError:m,isStandaloneComponent:s,...u})=>e(o,{isStandaloneComponent:s,configuration:r,amount:n,clickToPayService:a,setClickToPayRef:i,onSetStatus:c,onSubmit:l,onError:m},e(t,null,u.children));export{n as default};
+//# sourceMappingURL=ClickToPayWrapper.js.map

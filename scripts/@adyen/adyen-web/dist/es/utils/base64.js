@@ -1,0 +1,2 @@
+const e="not base64",r="malformed URI sequence",t={decode:o=>{if(!t.isBase64(o))return{success:!1,error:e};try{return{success:!0,data:(n=o,decodeURIComponent(Array.prototype.map.call(window.atob(n),(e=>`%${`00${e.charCodeAt(0).toString(16)}`.slice(-2)}`)).join("")))}}catch(e){return{success:!1,error:r}}var n},encode:e=>window.btoa(e),isBase64:e=>{if(!e)return!1;if(e.length%4)return!1;try{return window.btoa(window.atob(e))===e}catch(e){return!1}}};export{r as BASE64_MALFORMED_URI_ERROR,e as NOT_BASE64_ERROR,t as default};
+//# sourceMappingURL=base64.js.map

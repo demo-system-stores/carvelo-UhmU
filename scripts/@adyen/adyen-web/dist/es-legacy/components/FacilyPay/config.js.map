@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/FacilyPay/config.ts"],"sourcesContent":["export const ALLOWED_COUNTRIES = ['ES', 'FR'];\n"],"names":["ALLOWED_COUNTRIES"],"mappings":"MAAaA,EAAoB,CAAC,KAAM"}

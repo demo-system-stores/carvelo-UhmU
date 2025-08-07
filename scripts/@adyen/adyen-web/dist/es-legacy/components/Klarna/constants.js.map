@@ -1,0 +1,1 @@
+{"version":3,"file":"constants.js","sources":["../../../../src/components/Klarna/constants.ts"],"sourcesContent":["export const KLARNA_WIDGET_URL = 'https://x.klarnacdn.net/kp/lib/v1/api.js';\n"],"names":["KLARNA_WIDGET_URL"],"mappings":"AAAO,MAAMA,EAAoB"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/RatePay/config.ts"],"sourcesContent":["export const ALLOWED_COUNTRIES = ['AT', 'CH', 'DE', 'NL'];\n"],"names":["ALLOWED_COUNTRIES"],"mappings":"MAAaA,EAAoB,CAAC,KAAM,KAAM,KAAM"}

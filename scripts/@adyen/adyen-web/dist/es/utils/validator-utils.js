@@ -1,0 +1,2 @@
+const t=(t,e,r,n)=>{if(t[r]?.[e]?.formatterFn)return null;const l=t[r]?.[e]?.maxlength;return l||30},e=t=>!(null!=t&&!/^[\s]*$/.test(t)),r="?\\+_=!@#$%^&*(){}~<>\\[\\]\\\\",n=(t,e="g")=>new RegExp(`[${t}]`,e),l=t=>t.trimStart().replace(/\s+/g," ");export{r as SPECIAL_CHARS,n as getFormattingRegEx,t as getMaxLengthByFieldAndCountry,e as isEmpty,l as trimValWithOneSpace};
+//# sourceMappingURL=validator-utils.js.map

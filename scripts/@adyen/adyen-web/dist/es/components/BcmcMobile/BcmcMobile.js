@@ -1,0 +1,2 @@
+import e from"../helpers/QRLoaderContainer/QRLoaderContainer.js";import{COUNTDOWN_MINUTES as r,STATUS_INTERVAL as o}from"./config.js";import{TxVariants as t}from"../tx-variants.js";function a(e,r,o){return r in e?Object.defineProperty(e,r,{value:o,enumerable:!0,configurable:!0,writable:!0}):e[r]=o,e}class i extends e{formatProps(e){return{delay:o,countdownTime:r,timeToPay:"payme.timeToPay",...super.formatProps(e)}}}a(i,"type",t.bcmc_mobile),a(i,"txVariants",[t.bcmc_mobile,t.bcmc_mobile_QR]);export{i as default};
+//# sourceMappingURL=BcmcMobile.js.map

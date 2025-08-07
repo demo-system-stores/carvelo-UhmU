@@ -1,0 +1,2 @@
+import{createElement as e}from"../../../../external/preact/dist/preact.js";import t from"../../../../_virtual/index.js";import a from"../../Img/Img.js";function s({name:s,id:r,icon:c,onClick:n,selected:o=!1}){return e("button",{type:"button",className:t("adyen-checkout__issuer-button",{"adyen-checkout__issuer-button--selected":o}),"aria-label":s,"aria-pressed":o,onClick:n,value:r},!!c&&e(a,{className:"adyen-checkout__issuer-button-img",alt:s,src:c}),e("span",{className:"adyen-checkout__issuer-button-text"},s))}export{s as default};
+//# sourceMappingURL=IssuerButton.js.map

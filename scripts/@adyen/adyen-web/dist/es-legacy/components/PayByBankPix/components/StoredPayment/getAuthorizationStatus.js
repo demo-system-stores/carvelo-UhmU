@@ -1,0 +1,2 @@
+import{httpGet as t}from"../../../../core/Services/http.js";async function i({enrollmentId:i,initiationId:o,clientKey:n,loadingContext:e,timeout:r=1e4}){if(!i||!o||!n)throw new Error("Could not get auth options");return t({loadingContext:e,path:`utility/v1/pixpaybybank/authorization-options?initiationId=${o}&enrollmentId=${i}&clientKey=${n}`,timeout:r})}export{i as default};
+//# sourceMappingURL=getAuthorizationStatus.js.map

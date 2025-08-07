@@ -1,0 +1,2 @@
+import i from"../../utils/uuid.js";import{getUTCTimestamp as t}from"./utils.js";function e(i,t,e){return t in i?Object.defineProperty(i,t,{value:e,enumerable:!0,configurable:!0,writable:!0}):i[t]=e,i}class o{constructor(){e(this,"timestamp",void 0),e(this,"id",void 0),e(this,"component",void 0),this.id=i(),this.timestamp=String(t())}}export{o as AnalyticsEvent};
+//# sourceMappingURL=AnalyticsEvent.js.map

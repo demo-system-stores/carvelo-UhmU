@@ -1,0 +1,1 @@
+{"version":3,"file":"href.js","sourceRoot":"","sources":["../../../../src/typings/balancePlatform/href.ts"],"names":[],"mappings":";AAAA;;;;;;;GAOG;;;AAGH,MAAa,IAAI;IAYb,MAAM,CAAC,mBAAmB;QACtB,OAAO,IAAI,CAAC,gBAAgB,CAAC;IACjC,CAAC;;AAdL,oBAeC;AAZU,kBAAa,GAAuB,SAAS,CAAC;AAE9C,qBAAgB,GAA0D;IAC7E;QACI,MAAM,EAAE,MAAM;QACd,UAAU,EAAE,MAAM;QAClB,MAAM,EAAE,QAAQ;KACnB;CAAK,CAAC"}

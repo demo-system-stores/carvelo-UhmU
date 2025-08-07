@@ -1,0 +1,2 @@
+const u="/ ",l=(u,l)=>(null==l?void 0:l.value)&&(null==l?void 0:l.currency)?u.amount(l.value,l.currency,{currencyDisplay:l.currencyDisplay||"symbol"}):"",n=(u,n)=>`${u.get("payButton")} ${l(u,n)}`,r=(u,l)=>{const n=l&&(null==l?void 0:l.value)&&(null==l?void 0:l.currency)?u.amount(l.value,l.currency,{currencyDisplay:l.currencyDisplay||"symbol"}):"";return`${n.length?"/ ":""}${n}`};export{u as PAY_BTN_DIVIDER,l as amountLabel,n as payAmountLabel,r as secondaryAmountLabel};
+//# sourceMappingURL=utils.js.map

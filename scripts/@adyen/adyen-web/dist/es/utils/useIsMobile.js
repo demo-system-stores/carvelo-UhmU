@@ -1,0 +1,2 @@
+import{useState as e,useCallback as t,useEffect as s}from"../external/preact/hooks/dist/hooks.js";function n(){return window.matchMedia("(max-width: 1024px)").matches}const o=()=>{const[o,i]=e(n()),r=t((()=>{const e=n();i(e)}),[]);return s((()=>(window.addEventListener("resize",r),()=>{window.removeEventListener("resize",r)})),[r]),{isMobileScreenSize:o}};export{o as useIsMobile};
+//# sourceMappingURL=useIsMobile.js.map

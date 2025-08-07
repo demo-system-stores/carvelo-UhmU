@@ -1,0 +1,2 @@
+import{httpPost as e}from"../http.js";import{API_VERSION as r}from"./constants.js";function o(o,t){const n=`${r}/sessions/${o.id}/setup?clientKey=${o.clientKey}`,s={browserInfo:t.browserInfo,sessionData:o.data,...t.order?{order:{orderData:t.order.orderData,pspReference:t.order.pspReference}}:{}};return e({loadingContext:o.loadingContext,path:n,errorLevel:"fatal"},s)}export{o as default};
+//# sourceMappingURL=setup-session.js.map

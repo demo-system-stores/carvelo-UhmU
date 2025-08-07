@@ -1,0 +1,2 @@
+import e from"../helpers/OpenInvoiceContainer/OpenInvoiceContainer.js";import{ALLOWED_COUNTRIES as r}from"./config.js";import{TxVariants as t}from"../tx-variants.js";class o extends e{formatProps(e){return{...super.formatProps({...e,visibility:{bankAccount:"editable"}}),allowedCountries:e.countryCode?[e.countryCode]:r}}}var i,n,a;i=o,n="type",a=t.ratepay_directdebit,n in i?Object.defineProperty(i,n,{value:a,enumerable:!0,configurable:!0,writable:!0}):i[n]=a;export{o as default};
+//# sourceMappingURL=RatePayDirectDebit.js.map

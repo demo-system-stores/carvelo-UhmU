@@ -1,0 +1,2 @@
+import r from"../helpers/IssuerListContainer/IssuerListContainer.js";import e from"../../utils/browserInfo.js";import{TxVariants as t}from"../tx-variants.js";class o extends r{formatProps(r){return{...super.formatProps(r),showImage:!1}}formatData(){return{...super.formatData(),browserInfo:this.browserInfo}}get browserInfo(){return e()}}var s,a,n;s=o,a="type",n=t.wallet_IN,a in s?Object.defineProperty(s,a,{value:n,enumerable:!0,configurable:!0,writable:!0}):s[a]=n;export{o as default};
+//# sourceMappingURL=index.js.map

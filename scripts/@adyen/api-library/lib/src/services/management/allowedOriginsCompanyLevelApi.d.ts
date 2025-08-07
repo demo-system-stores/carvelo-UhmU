@@ -1,0 +1,43 @@
+import Service from "../../service";
+import Client from "../../client";
+import { AllowedOrigin, AllowedOriginsResponse } from "../../typings/management/models";
+import { IRequest } from "../../typings/requestOptions";
+export declare class AllowedOriginsCompanyLevelApi extends Service {
+    private readonly API_BASEPATH;
+    private baseUrl;
+    constructor(client: Client);
+    /**
+    * @summary Create an allowed origin
+    * @param companyId {@link string } The unique identifier of the company account.
+    * @param apiCredentialId {@link string } Unique identifier of the API credential.
+    * @param allowedOrigin {@link AllowedOrigin }
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link AllowedOrigin }
+    */
+    createAllowedOrigin(companyId: string, apiCredentialId: string, allowedOrigin: AllowedOrigin, requestOptions?: IRequest.Options): Promise<AllowedOrigin>;
+    /**
+    * @summary Delete an allowed origin
+    * @param companyId {@link string } The unique identifier of the company account.
+    * @param apiCredentialId {@link string } Unique identifier of the API credential.
+    * @param originId {@link string } Unique identifier of the allowed origin.
+    * @param requestOptions {@link IRequest.Options }
+    */
+    deleteAllowedOrigin(companyId: string, apiCredentialId: string, originId: string, requestOptions?: IRequest.Options): Promise<void>;
+    /**
+    * @summary Get an allowed origin
+    * @param companyId {@link string } The unique identifier of the company account.
+    * @param apiCredentialId {@link string } Unique identifier of the API credential.
+    * @param originId {@link string } Unique identifier of the allowed origin.
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link AllowedOrigin }
+    */
+    getAllowedOrigin(companyId: string, apiCredentialId: string, originId: string, requestOptions?: IRequest.Options): Promise<AllowedOrigin>;
+    /**
+    * @summary Get a list of allowed origins
+    * @param companyId {@link string } The unique identifier of the company account.
+    * @param apiCredentialId {@link string } Unique identifier of the API credential.
+    * @param requestOptions {@link IRequest.Options }
+    * @return {@link AllowedOriginsResponse }
+    */
+    listAllowedOrigins(companyId: string, apiCredentialId: string, requestOptions?: IRequest.Options): Promise<AllowedOriginsResponse>;
+}

@@ -1,0 +1,2 @@
+const e=(e,a)=>{if(void 0===e?.address)return null;const{address:r,name:n}=e,d=((e=null,a=null)=>e&&a?`${e}, ${a}`:e||(a||null))(r.address_line_1,r.address_line_2);return{houseNumberOrName:"ZZ",...d&&{street:d},...r.admin_area_1&&{stateOrProvince:r.admin_area_1},...r.admin_area_2&&{city:r.admin_area_2},...r.postal_code&&{postalCode:r.postal_code},...r.country_code&&{country:r.country_code},...a&&{firstName:n.full_name}}};export{e as formatPaypalOrderContactToAdyenFormat};
+//# sourceMappingURL=format-paypal-order-contact-to-adyen-format.js.map

@@ -1,0 +1,2 @@
+import{httpGet as a}from"./http.js";async function t(t,r,n){try{return await a({loadingContext:t,errorLevel:"fatal",errorMessage:`Translations: Failed to fetch translations for locale "${n}"`,path:`sdk/${r}/translations/${n}.json`})}catch(o){return await a({loadingContext:t,errorLevel:"fatal",errorMessage:`Translations: Couldn't fetch translation for locale "${n}" nor the fallback translation "en-US"`,path:`sdk/${r}/translations/en-US.json`})}}export{t as default};
+//# sourceMappingURL=get-translations.js.map

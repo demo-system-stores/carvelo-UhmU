@@ -1,0 +1,2 @@
+import{CPF_LENGTH as r}from"./constants.js";function e(r){return r.replace(/\W/gi,"").replace(/(\d{3})(?!$)/g,"$1.").replace(/(.{11}).(\d{1,2})$/g,"$1-$2")}function n(r){return r.replace(/^(\d{2})(\d{3})(\d{3})?(\d{4})?(\d{1,2})?$/g,((r,e,n,t,$="",c="")=>`${e}.${n}.${t}/${$}${c.length?`-${c}`:""}`))}function t(r){return r.replace(/[^0-9]/g,"").trim()}function $($=""){if("string"!=typeof $)return"";const c=t($);return c.length>r?n(c):e(c)}export{t as cleanCPFCNPJ,$ as formatCPFCNPJ,n as maskCNPJ,e as maskCPF};
+//# sourceMappingURL=utils.js.map

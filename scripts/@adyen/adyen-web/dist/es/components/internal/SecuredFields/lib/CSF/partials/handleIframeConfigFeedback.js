@@ -1,0 +1,2 @@
+function e({csfState:e,csfCallbacks:i},f,n){if(e.iframeConfigCount+=1,window._b$dl&&console.log("### handleIframeConfigFeedback::csfState.iframeConfigCount:: ",e.iframeConfigCount,"who=",n.fieldType),e.isConfigured){const f={additionalIframeConfigured:!0,fieldType:n.fieldType,type:e.type};i.onAdditionalSFConfig(f)}else if(e.iframeConfigCount===e.originalNumIframes)return f(),!0;return!1}export{e as handleIframeConfigFeedback};
+//# sourceMappingURL=handleIframeConfigFeedback.js.map

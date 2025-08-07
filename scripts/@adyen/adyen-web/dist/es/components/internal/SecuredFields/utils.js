@@ -1,0 +1,2 @@
+import{camelCaseToSnakeCase as t}from"../../../utils/textUtils.js";import{ALL_SECURED_FIELDS as n,ENCRYPTED as r}from"./lib/constants.js";const s=(t,n)=>{const r="card"===t?"nocard":t||"nocard",s={type:r,extension:"svg"};return n.getImage(s)(r)},e=s=>{let e=t(s);return n.includes(s)&&(e=e.substring(r.length+1)),e};export{e as fieldTypeToSnakeCase,s as getCardImageUrl};
+//# sourceMappingURL=utils.js.map

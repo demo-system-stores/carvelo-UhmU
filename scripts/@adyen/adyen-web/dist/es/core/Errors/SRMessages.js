@@ -1,0 +1,2 @@
+import{createElement as e,Fragment as t}from"../../external/preact/dist/preact.js";import{useRef as s,useState as r}from"../../external/preact/hooks/dist/hooks.js";function n({setComponentRef:n}){const a=s({});Object.keys(a.current).length||n?.(a.current);const[o,c]=r(null);return a.current.setMessages=e=>{c(e)},o?e(t,null,o.map((t=>e("div",{key:t,className:"adyen-checkout-sr-panel__msg"},t)))):null}export{n as SRMessages};
+//# sourceMappingURL=SRMessages.js.map

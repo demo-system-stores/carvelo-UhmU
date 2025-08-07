@@ -1,0 +1,1 @@
+{"version":3,"file":"utils.js","sources":["../../../../../../../src/components/internal/ClickToPay/services/sdks/utils.ts"],"sourcesContent":["const SchemeNames = {\n    mc: 'Mastercard',\n    visa: 'Visa'\n};\n\nexport { SchemeNames };\n"],"names":["SchemeNames","mc","visa"],"mappings":"AAAA,MAAMA,EAAc,CAChBC,GAAI,aACJC,KAAM"}

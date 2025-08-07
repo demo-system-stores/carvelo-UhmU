@@ -1,0 +1,1 @@
+{"version":3,"file":"validate.js","sources":["../../../../../src/components/internal/SocialSecurityNumberBrazil/validate.ts"],"sourcesContent":["export default function (ssn) {\n    return /(^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$)|(^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}-\\d{2}$)/.test(ssn);\n}\n"],"names":["ssn","test"],"mappings":"AAAe,WAAUA,GACrB,MAAO,qEAAqEC,KAAKD,EACrF"}
