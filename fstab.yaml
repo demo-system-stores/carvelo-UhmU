@@ -1,0 +1,7 @@
+mountpoints:
+  /:
+    url: https://content.da.live/adobe-summit-l320/seat-01/
+    type: markup
+
+folders:
+  /products/: /products/default
