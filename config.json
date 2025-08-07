@@ -1,0 +1,27 @@
+{
+  "public": {
+    "default": {
+      "commerce-core-endpoint": "https://www.aemshop.net/graphql",
+      "commerce-endpoint": "https://na1-sandbox.api.commerce.adobe.com/HrGdF2hSbuwgK1f7Qf23u6/graphql",
+      "headers": {
+        "cs": {
+          "ac-channel-id": "dd3a0531-dc2c-456f-a2e4-ebabee88e0c1",
+          "ac-environment-id": "HrGdF2hSbuwgK1f7Qf23u6",
+          "ac-price-book-id": "west_coast_inc",
+          "ac-scope-locale": "en-US"
+        }
+      },
+      "analytics": {
+        "base-currency-code": "USD",
+        "environment": "Production",
+        "store-id": 1,
+        "store-name": "ACO Pen Test 2",
+        "store-url": "https://www.aemshop.net",
+        "store-view-id": 1,
+        "store-view-name": "Default Store View",
+        "website-id": 1,
+        "website-name": "Main Website"
+      }
+    }
+  }
+}
