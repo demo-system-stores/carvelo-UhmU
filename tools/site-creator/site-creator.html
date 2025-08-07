@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Storefront Content Initialization - Adobe Commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://da.live/nx/styles/nexter.css">
+  <link rel="stylesheet" href="/tools/site-creator/index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "da-lit": "https://da.live/deps/lit/dist/index.js"
+      }
+    }
+  </script>
+  <script src="https://da.live/nx/utils/sdk.js" type="module"></script>
+  <script src="/tools/site-creator/site-creator.js" type="module"></script>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+<main>
+  <div class="header">
+    <h1>Create your Commerce Storefront</h1>
+    <img width="2000" height="558" class="logo" src="./Logo-Adobe-Commerce.png" />
+  </div>
+  <p class="subheader">This tool provisions your own version of the <a href="https://www.aemshop.net" target="_blank">aemshop.net</a> storefront. It will clone the code and content behind <a href="https://www.aemshop.net" target="_blank">aemshop.net</a> to your own code and content repositories and publish them on your behalf.
+	<br/><br/>
+  <strong>Note:</strong> This tool can only create <strong>one fork</strong> per template repository per GitHub user account. If you already have a fork of the Boilerplate, you will need delete it to use this tool. For more granular control, you can use the <a href="https://github.com/adobe-commerce/aio-cli-plugin-commerce" target="_blank">Commerce Scaffolding CLI</a> or go through the onboarding tutorial <a href="https://experienceleague.adobe.com/developer/commerce/storefront/get-started/" target="_blank">here</a>.
+</p>
+  <da-site-creator></da-site-creator>
+</main>
+</body>
+</html>
