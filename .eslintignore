@@ -1,0 +1,9 @@
+helix-importer-ui
+scripts/acdl
+tools/picker
+tools/segments
+tools/pdp-metadata
+scripts/__
+scripts/widgets
+plugins/
+cypress/
