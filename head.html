@@ -1,0 +1,67 @@
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script>
+    const isImportMapSupported = HTMLScriptElement.supports && HTMLScriptElement.supports('importmap');
+  
+    if (!isImportMapSupported) {
+      document.head.appendChild(
+        Object.assign(document.createElement('script'), {
+          type: 'esms-options',
+          innerHTML: JSON.stringify({
+            shimMode: true,
+          }),
+        })
+      );
+      document.head.appendChild(
+        Object.assign(document.createElement('script'), {
+          type: 'module',
+          src: '/scripts/es-module-shims.js',
+          async: true,
+        })
+      );
+    }
+  
+    document.head.appendChild(
+      Object.assign(document.createElement('script'), {
+        type: isImportMapSupported ? 'importmap' : 'importmap-shim',
+        innerHTML: JSON.stringify({
+          imports: {
+            '@dropins/tools/': '/scripts/__dropins__/tools/',
+            '@dropins/storefront-pdp/': '/scripts/__dropins__/storefront-pdp/',
+          },
+        }),
+      })
+    );
+  
+    ['aem.js', 'scripts.js', 'configs.js', 'commerce.js'].forEach((script) => {
+      document.head.appendChild(
+        Object.assign(document.createElement('script'), {
+          type: isImportMapSupported ? 'module' : 'module-shim',
+          src: '/scripts/' + script,
+        })
+      );
+    });
+
+    ['dropins.js', '__dropins__/tools/event-bus.js', '__dropins__/tools/fetch-graphql.js', '__dropins__/tools/initializer.js', '__dropins__/tools/runtime.js'].forEach((script) => {
+        document.head.appendChild(
+            Object.assign(document.createElement('link'), {
+                rel: isImportMapSupported ? 'modulepreload' : 'modulepreload-shim',
+                href: '/scripts/' + script,
+            })
+        );
+    });
+  </script>
+<script type="speculationrules">
+    {
+        "prerender": [{
+            "where": {
+                "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+        }]
+    }
+</script>
+
+<link rel="stylesheet" href="/styles/styles.css" />
+
+<link rel="preconnect" href="https://catalog-service-sandbox.adobe.io" crossorigin="" />
+<link rel="preconnect" href="https://catalog-service.adobe.io" crossorigin="" />
