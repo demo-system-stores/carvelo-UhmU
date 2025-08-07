@@ -1,0 +1,5 @@
+mountpoints:
+  /: {YOUR_MOUNTPOINT_URL}
+
+folders:
+  /products/: /products/default
