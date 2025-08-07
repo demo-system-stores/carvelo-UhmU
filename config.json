@@ -1,0 +1,30 @@
+{
+  "public": {
+    "default": {
+      "commerce-core-endpoint": "https://na1-stage.api.commerce.adobe.com/HUxLfbckFgvGDWzpd4QGo1/graphql",
+      "commerce-endpoint": "https://na1-stage.api.commerce.adobe.com/HUxLfbckFgvGDWzpd4QGo1/graphql",
+      "headers": {
+        "cs": {
+          "Magento-Environment-Id": "HUxLfbckFgvGDWzpd4QGo1",
+          "Magento-Website-Code": "base",
+          "Magento-Store-Code": "main_website_store",
+          "Magento-Store-View-Code": "default",
+          "Magento-Customer-Group": "b6589fc6ab0dc82cf12099d1c2d40ab994e8410c",
+          "X-Api-Key": "storefront-catalog-apollo",
+          "content-type": "application/json"
+        }
+      },
+      "analytics": {
+        "base-currency-code": "USD",
+        "environment": "Production",
+        "store-id": 1,
+        "store-name": "e2e cell prex dropin accs prod type",
+        "store-url": "https://e2e-prex-dropin-accsprod--aem-boilerplate-commerce--hlxsites.aem.live/",
+        "store-view-id": 1,
+        "store-view-name": "default",
+        "website-id": 1,
+        "website-name": "Main Website"
+      }
+    }
+  }
+}
