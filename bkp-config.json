@@ -19,11 +19,11 @@
         "environment": "Production",
         "store-id": 1,
         "store-name": "ACO Store",
-        "store-url": "https://main--arkbridge-uhmu--demo-system-stores.aem.live",
+        "store-url": "https://main--carvelo-uhmu--demo-system-stores.aem.live",
         "store-view-id": 1,
-        "store-view-name": "Default Store View",
+        "store-view-name": "Global Store View",
         "website-id": 1,
-        "website-name": "Main Website"
+        "website-name": "Carvelo Website"
       },
       "plugins": {
         "picker": {
