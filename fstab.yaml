@@ -1,0 +1,7 @@
+mountpoints:
+  /:
+    url: https://content.da.live/demo-system-stores/carvelo-uhmu/
+    type: markup
+
+folders:
+  /products/: /products/default
