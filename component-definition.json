@@ -163,9 +163,7 @@
           "id": "product-recommendations",
           "plugins": {
             "da": {
-              "name": "product-recommendations",
-              "rows": 2,
-              "columns": 2
+              "unsafeHTML": "<div class=\"product-recommendations\"><div><div>recid</div><div><p></p></div></div><div><div>currentSku</div><div><p></p></div></div></div>"
             }
           }
         },
@@ -174,9 +172,7 @@
           "id": "product-teaser",
           "plugins": {
             "da": {
-              "name": "product-teaser",
-              "rows": 1,
-              "columns": 1
+              "unsafeHTML": "<div class=\"product-teaser\"><div><div>sku</div><div><p></p></div></div><div><div>details-button</div><div><p></p></div></div><div><div>cart-button</div><div><p></p></div></div></div>"
             }
           }
         },
