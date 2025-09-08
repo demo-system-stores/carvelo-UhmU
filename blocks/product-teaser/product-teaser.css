@@ -52,7 +52,6 @@
 
 .product-teaser h1 {
     min-height: 32px;
-    margin: 0 0 16px;
     color: var(--color-neutral-50);
     font: var(--type-display-3-font);
     letter-spacing: var(--type-display-3-letter-spacing);
