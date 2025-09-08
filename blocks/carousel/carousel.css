@@ -2,6 +2,18 @@
   position: relative;
 }
 
+
+
+
+
+.carousel nav[aria-label="Carousel Slide Controls"] {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: -50px;
+  z-index: 11;
+}
+
 .carousel .carousel-slides,
 .carousel .carousel-slide-indicators {
   list-style: none;
@@ -14,6 +26,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow: scroll clip;
+  border-radius: 20px;
 }
 
 .carousel .carousel-slides::-webkit-scrollbar {
@@ -49,16 +62,19 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
   z-index: 1;
   margin: 68px;
   padding: 16px;
-  color: white;
-  background-color: rgb(19 19 19 / 75%);
+  color: var(--color-brand-1000);
+  background-color: rgba(255, 255, 255, 0.4);
   position: relative;
   width: var(--slide-content-width, auto);
+  margin: 10% auto;
+  text-align: center;
 }
 
 .carousel .carousel-slide-indicators {
@@ -72,19 +88,21 @@
 }
 
 .carousel .carousel-slide-indicator button {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  background-color: #dadada;
+  background-color: var(--color-neutral-600);
   transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
 .carousel .carousel-slide-indicator button:disabled,
 .carousel .carousel-slide-indicator button:hover,
 .carousel .carousel-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
+  background-color: var(--color-brand-1000);
 }
 
 .carousel .carousel-navigation-buttons {
@@ -105,10 +123,13 @@
   width: 44px;
   height: 44px;
   margin: 0;
-  border-radius: 50%;
   padding: 0;
-  background-color: rgb(19 19 19 / 25%);
   transition: background-color 0.2s;
+  background-color: rgba(0,0,0,.5);
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  cursor: pointer;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
@@ -128,6 +149,7 @@
   top: 50%;
   left: calc(50% + 2px);
   transform: translate(-50%, -50%) rotate(-135deg);
+  color: #ffffff;
 }
 
 .carousel .carousel-navigation-buttons button.slide-next::after {
@@ -143,8 +165,6 @@
 
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: calc((100% - 184px) / 2);
-
-    margin: 92px;
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
