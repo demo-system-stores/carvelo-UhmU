@@ -248,7 +248,7 @@ export default async function decorate(block) {
 
   function shouldReloadRecommendations(newContext) {
     // Check if significant context changes occurred that warrant reloading recommendations
-    const significantChanges = ['currentSku', 'pageType', 'category'];
+    const significantChanges = ['currentSku', 'pageType', 'category', 'recId'];
 
     return significantChanges.some(
       (key) => newContext[key] !== previousContext[key] && newContext[key] !== undefined,
