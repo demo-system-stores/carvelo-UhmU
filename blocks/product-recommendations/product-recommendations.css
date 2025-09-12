@@ -61,3 +61,78 @@
     gap: 10px;
     align-items: center;
 }
+
+
+.product-recommendations-wrapper .dropin-content-grid__content {
+    width: 100%;
+    background-color: var(--color-brand-1000);
+    border-radius: 20px;
+    flex-flow: row wrap;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.product-recommendations-wrapper .dropin-content-grid__content span {
+    display: inline-flex;
+    width: auto;
+    border-radius: 20px;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card {
+    display: inline-flex;
+    width: auto;
+    border-radius: 20px;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card img {
+    background-color: transparent;
+    color: #ffffff;
+    height: 130px;
+    width: auto;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--add-to-cart {
+    text-align: left;
+}
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--add-to-cart a {
+    padding: 0;
+    
+}
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--wishlist-toggle {
+    text-align: right;
+}
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--wishlist-toggle button {
+    padding: 0;
+    
+}
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--add-to-cart {
+    text-align: left;
+}
+.product-recommendations-wrapper .dropin-content-grid__content .dropin-product-item-card .footer__wrapper .footer__button--add-to-cart button {
+    padding: 0;
+    color: var(--color-brand-500);
+    background-color: transparent;
+    border: none;
+    font: var(--type-button-2-font);
+    letter-spacing: var(--type-button-2-letter-spacing);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+    cursor: pointer;
+}
