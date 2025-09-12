@@ -67,7 +67,7 @@ export default async function decorate(block) {
   block.children[1].style.display = 'none';
 
   // Configuration
-  const { currentsku, recid } = readBlockConfig(block);
+  let { currentsku, recid } = readBlockConfig(block);
 
   // Layout
   const fragment = document.createRange().createContextualFragment(`
@@ -232,6 +232,57 @@ export default async function decorate(block) {
   }
 
   const context = {};
+  
+  // Function to re-read block configuration and trigger refresh
+  function refreshBlockConfiguration() {
+    const newConfig = readBlockConfig(block);
+    const oldRecid = recid;
+    const oldCurrentsku = currentsku;
+    
+    // Update configuration variables
+    currentsku = newConfig.currentsku;
+    recid = newConfig.recid;
+    
+    // Check if significant configuration changes occurred
+    if (oldRecid !== recid || oldCurrentsku !== currentsku) {
+      // Update context with new configuration values
+      updateContext({ 
+        recId: recid, 
+        currentSku: currentsku 
+      });
+    }
+  }
+  
+  // Watch for DOM changes to configuration elements (for Universal Editor)
+  const configObserver = new MutationObserver((mutations) => {
+    let configChanged = false;
+    mutations.forEach((mutation) => {
+      // Check if the mutation affects the configuration rows
+      if (mutation.type === 'childList' || mutation.type === 'characterData') {
+        const target = mutation.target;
+        // Check if the target is within a configuration row
+        if (target.closest && target.closest('.product-recommendations > div')) {
+          configChanged = true;
+        }
+      }
+    });
+    
+    if (configChanged) {
+      // Debounce configuration refresh to avoid excessive calls
+      clearTimeout(loadTimeout);
+      loadTimeout = setTimeout(() => {
+        refreshBlockConfiguration();
+      }, 500); // 500ms debounce for config changes
+    }
+  });
+  
+  // Start observing the block for configuration changes
+  configObserver.observe(block, {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
+  
   // Debounced loader to prevent excessive API calls
   function debouncedLoadRecommendation(forceReload = false) {
     if (loadTimeout) {
@@ -296,12 +347,31 @@ export default async function decorate(block) {
     updateContext({ cartSkus });
   }
 
+  // Initialize context with current configuration
+  updateContext({ 
+    recId: recid, 
+    currentSku: currentsku 
+  });
+
   window.adobeDataLayer.push((dl) => {
     dl.addEventListener('adobeDataLayer:change', handlePageTypeChanges, { path: 'pageContext' });
     dl.addEventListener('adobeDataLayer:change', handleProductChanges, { path: 'productContext' });
     dl.addEventListener('adobeDataLayer:change', handleCategoryChanges, { path: 'categoryContext' });
     dl.addEventListener('adobeDataLayer:change', handleCartChanges, { path: 'shoppingCartContext' });
   });
+  
+  // Cleanup function to disconnect observer when block is removed
+  const cleanupObserver = () => {
+    if (configObserver) {
+      configObserver.disconnect();
+    }
+  };
+  
+  // Listen for when the block might be removed or page unloaded
+  window.addEventListener('beforeunload', cleanupObserver);
+  
+  // Store cleanup function on the block element for potential external cleanup
+  block._cleanup = cleanupObserver;
 
   if (isMobile) {
     const section = block.closest('.section');
