@@ -1,0 +1,177 @@
+/* Site Switcher Block Styles */
+.siteswitcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siteswitcher-button {
+  display: flex;
+  align-items: center;
+}
+
+.siteview-switcher-button {
+  white-space: nowrap;
+}
+
+/* Site Switcher Modal Styles */
+.siteview-modal-siteview-title {
+  margin-bottom: var(--spacing-xxbig);
+  padding-inline-start: var(--spacing-xbig);
+}
+
+.siteview-modal-siteview-title h3 {
+  margin: 0;
+  font-size: var(--type-heading-m-size);
+  font-weight: var(--type-heading-m-weight);
+  line-height: var(--type-heading-m-lh);
+}
+
+.siteview-modal-siteview-list {
+  padding: 0 var(--spacing-xbig);
+}
+
+.siteview-modal-siteview-list .default-content-wrapper > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.siteviews li {
+  padding-left: var(--spacing-medium);
+  border-bottom: none;
+}
+
+.siteview-modal-siteview-list .default-content-wrapper > ul > li {
+  border-bottom: 1px solid var(--color-neutral-300);
+  padding: var(--spacing-small) 0;
+}
+
+.siteview-modal-siteview-list .default-content-wrapper > ul > li:last-child {
+  border-bottom: none;
+}
+
+.siteview-modal-siteview-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-neutral-800);
+  padding: var(--spacing-small) 0;
+  transition: color 0.2s ease;
+}
+
+.siteview-modal-siteview-list a:hover,
+.siteview-modal-siteview-list a:focus {
+  color: var(--color-brand-600);
+}
+
+.siteview-modal-siteview-list a[aria-current="page"],
+.siteview-modal-siteview-list a.current {
+  color: var(--color-brand-600);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Accordion styles for multiple sites per region */
+.siteview-selection {
+  position: relative;
+}
+
+.siteview-multiple-sites {
+  cursor: pointer;
+  position: relative;
+}
+
+.siteview-multiple-sites::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-neutral-600);
+  transition: transform 0.2s ease;
+}
+
+.siteview-multiple-sites[aria-expanded="true"]::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.siteviews {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.siteview-multiple-sites[aria-expanded="true"] + .siteviews,
+.siteview-multiple-sites[aria-expanded="true"] .siteviews {
+  max-height: 300px;
+}
+
+.siteview-single-site {
+  padding-left: 0;
+}
+
+/* Modal close button positioning for site switcher */
+.modal .close-button {
+  top: 40px !important;
+  right: 40px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .siteview-modal-siteview-title {
+    padding-inline-start: var(--spacing-medium);
+  }
+  
+  .siteview-modal-siteview-list {
+    padding: 0 var(--spacing-medium);
+  }
+  
+  .modal .close-button {
+    top: 20px !important;
+    right: 20px !important;
+  }
+}
+
+/* Footer Site Switcher Styles */
+
+/* Footer Site Switcher Container */
+.footer-siteswitcher {
+  margin-top: var(--spacing-medium);
+  padding: var(--spacing-small) 0;
+}
+
+/* Footer Site Switcher Button */
+.footer-siteswitcher .siteview-switcher-button {
+  background: transparent;
+  padding-left: 0;
+  color: var(--color-neutral-700);
+  border: 1px solid var(--color-neutral-400);
+  border-radius: var(--shape-border-radius-1);
+  transition: all 0.2s ease;
+}
+
+.footer-siteswitcher .siteview-switcher-button:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-800);
+  border-color: var(--color-neutral-500);
+}
+
+.footer-siteswitcher .siteview-switcher-button:focus {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+/* Footer Responsive adjustments */
+@media (max-width: 600px) {
+  .footer-siteswitcher {
+    margin-top: var(--spacing-small);
+  }
+  
+  .footer-siteswitcher .siteview-switcher-button {
+    font-size: var(--type-body-2-size);
+    padding: var(--spacing-xsmall) var(--spacing-small);
+  }
+}
