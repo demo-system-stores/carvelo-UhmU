@@ -254,34 +254,37 @@ export default async function decorate(block) {
   }
 
   // Watch for DOM changes to configuration elements (for Universal Editor)
-  const configObserver = new MutationObserver((mutations) => {
-    let configChanged = false;
-    mutations.forEach((mutation) => {
-      // Check if the mutation affects the configuration rows
-      if (mutation.type === 'childList' || mutation.type === 'characterData') {
-        const { target } = mutation;
-        // Check if the target is within a configuration row
-        if (target.closest && target.closest('.product-recommendations > div')) {
-          configChanged = true;
+  let configObserver;
+  if (window.location.hostname.includes('ue.da.live')) {
+    configObserver = new MutationObserver((mutations) => {
+      let configChanged = false;
+      mutations.forEach((mutation) => {
+        // Check if the mutation affects the configuration rows
+        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+          const { target } = mutation;
+          // Check if the target is within a configuration row
+          if (target.closest && target.closest('.product-recommendations > div')) {
+            configChanged = true;
+          }
         }
+      });
+
+      if (configChanged) {
+        // Debounce configuration refresh to avoid excessive calls
+        clearTimeout(loadTimeout);
+        loadTimeout = setTimeout(() => {
+          refreshBlockConfiguration();
+        }, 500); // 500ms debounce for config changes
       }
     });
 
-    if (configChanged) {
-      // Debounce configuration refresh to avoid excessive calls
-      clearTimeout(loadTimeout);
-      loadTimeout = setTimeout(() => {
-        refreshBlockConfiguration();
-      }, 500); // 500ms debounce for config changes
-    }
-  });
-
-  // Start observing the block for configuration changes
-  configObserver.observe(block, {
-    childList: true,
-    subtree: true,
-    characterData: true,
-  });
+    // Start observing the block for configuration changes
+    configObserver.observe(block, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+  }
 
   // Debounced loader to prevent excessive API calls
   function debouncedLoadRecommendation(forceReload = false) {
