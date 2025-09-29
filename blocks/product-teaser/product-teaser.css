@@ -32,7 +32,8 @@
     display: block;
     width: 100%;
     max-width: 500px;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     opacity: .9;
 }

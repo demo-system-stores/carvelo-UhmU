@@ -97,6 +97,18 @@
     display: none;
 }
 
+/* Fix stretchy images in product discovery */
+.block.product-list-page img {
+    height: auto !important;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.block.product-list-page picture {
+    display: block;
+    aspect-ratio: 1;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 768px) {
     .block.product-list-page .search__wrapper {
