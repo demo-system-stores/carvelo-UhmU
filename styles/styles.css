@@ -413,34 +413,34 @@ main .section.highlight {
   padding: var(--spacing-xbig) 0;
 }
 
-main .section.padding-default {
+main .section[data-padding="default"] {
   padding: var(--spacing-xxsmall) 0;
 }
-main .section.padding-small {
+main .section[data-padding="small"] {
   padding: var(--spacing-xsmall) 0;
 }
-main .section.padding-medium {
+main .section[data-padding="medium"] {
   padding: var(--spacing-small) 0;
 }
-main .section.padding-large {
+main .section[data-padding="large"] {
   padding: var(--spacing-medium) 0;
 }
-main .section.padding-big {
+main .section[data-padding="big"] {
   padding: var(--spacing-big) 0;
 }
-main .section.padding-xbig {
+main .section[data-padding="xbig"] {
   padding: var(--spacing-xbig) 0;
 }
-main .section.padding-xxbig {
+main .section[data-padding="xxbig"] {
   padding: var(--spacing-xxbig) 0;
 }
-main .section.padding-huge {
+main .section[data-padding="huge"] {
   padding: var(--spacing-huge) 0;
 }
-main .section.padding-xhuge {
+main .section[data-padding="xhuge"] {
   padding: var(--spacing-xhuge) 0;
 }
-main .section.padding-xxhuge {
+main .section[data-padding="xxhuge"] {
   padding: var(--spacing-xxhuge) 0;
 }
 
