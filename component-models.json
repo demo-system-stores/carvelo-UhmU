@@ -62,14 +62,51 @@
         ]
       },
       {
-        "component": "reference",
-        "name": "background[src]",
-        "label": "Image"
-      },
-      {
-        "component": "richtext",
-        "name": "fancy",
-        "label": "Fancy"
+        "component": "select",
+        "name": "padding",
+        "label": "Padding",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          },
+          {
+            "name": "Big",
+            "value": "big"
+          },
+          {
+            "name": "XBig",
+            "value": "xbig"
+          },
+          {
+            "name": "XXBig",
+            "value": "xxbig"
+          },
+          {
+            "name": "Huge",
+            "value": "huge"
+          },
+          {
+            "name": "XHuge",
+            "value": "xhuge"
+          },
+          {
+            "name": "XXHuge",
+            "value": "xxhuge"
+          }
+        ]
       }
     ]
   },

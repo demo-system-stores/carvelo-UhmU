@@ -17,6 +17,9 @@
   --color-brand-500: #454545;
   --color-brand-600: #383838;
   --color-brand-700: #2b2b2b;
+  --color-brand-800: #1e1e1e;
+  --color-brand-900: #111;
+  --color-brand-1000: #000;
   --color-neutral-50: #fff;
   --color-neutral-100: #fafafa;
   --color-neutral-200: #f5f5f5;
@@ -409,6 +412,38 @@ main .section.highlight {
   margin: 0;
   padding: var(--spacing-xbig) 0;
 }
+
+main .section.padding-default {
+  padding: var(--spacing-xxsmall) 0;
+}
+main .section.padding-small {
+  padding: var(--spacing-xsmall) 0;
+}
+main .section.padding-medium {
+  padding: var(--spacing-small) 0;
+}
+main .section.padding-large {
+  padding: var(--spacing-medium) 0;
+}
+main .section.padding-big {
+  padding: var(--spacing-big) 0;
+}
+main .section.padding-xbig {
+  padding: var(--spacing-xbig) 0;
+}
+main .section.padding-xxbig {
+  padding: var(--spacing-xxbig) 0;
+}
+main .section.padding-huge {
+  padding: var(--spacing-huge) 0;
+}
+main .section.padding-xhuge {
+  padding: var(--spacing-xhuge) 0;
+}
+main .section.padding-xxhuge {
+  padding: var(--spacing-xxhuge) 0;
+}
+
 
 /* Base Design System Tokens */
 .dropin-design.dropin-design {
