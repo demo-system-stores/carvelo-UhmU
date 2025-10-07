@@ -405,7 +405,7 @@ main > .section:first-of-type {
   }
 }
 
-/* section metadata */
+/* section metadata - styles - start */
 main .section.light,
 main .section.highlight {
   background-color: var(--color-neutral-100);
@@ -413,9 +413,6 @@ main .section.highlight {
   padding: var(--spacing-xbig) 0;
 }
 
-main .section[data-padding="default"] {
-  padding: var(--spacing-xxsmall) 0;
-}
 main .section[data-padding="small"] {
   padding: var(--spacing-xsmall) 0;
 }
@@ -443,6 +440,35 @@ main .section[data-padding="xhuge"] {
 main .section[data-padding="xxhuge"] {
   padding: var(--spacing-xxhuge) 0;
 }
+
+main .section[data-margin="small"] {
+  padding: var(--spacing-xsmall) 0;
+}
+main .section[data-margin="medium"] {
+  padding: var(--spacing-small) 0;
+}
+main .section[data-margin="large"] {
+  padding: var(--spacing-medium) 0;
+}
+main .section[data-margin="big"] {
+  padding: var(--spacing-big) 0;
+}
+main .section[data-margin="xbig"] {
+  padding: var(--spacing-xbig) 0;
+}
+main .section[data-margin="xxbig"] {
+  padding: var(--spacing-xxbig) 0;
+}
+main .section[data-margin="huge"] {
+  padding: var(--spacing-huge) 0;
+}
+main .section[data-margin="xhuge"] {
+  padding: var(--spacing-xhuge) 0;
+}
+main .section[data-margin="xxhuge"] {
+  padding: var(--spacing-xxhuge) 0;
+}
+/* section metadata - styles - end */
 
 
 /* Base Design System Tokens */

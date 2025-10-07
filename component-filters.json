@@ -8,19 +8,18 @@
   {
     "id": "section",
     "components": [
+      "hero",
       "accordion",
       "cards",
       "carousel",
       "columns",
       "fragment",
-      "hero",
-      "product-recommendations",
       "quote",
-      "search",
       "tabs",
       "video",
       "image",
       "text",
+      "product-recommendations",
       "product-teaser"
     ]
   },
