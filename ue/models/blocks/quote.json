@@ -5,7 +5,7 @@
       "id": "quote",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"quote\"><blockquote><div><p>Quotation</p></div><div><p>Author</p></div></blockquote></div>"
+          "unsafeHTML": "<div class=\"quote\"><div><div><p>Quotation</p></div></div><div><div><p>Author</p></div></div></div>"
         }
       }
     }
@@ -17,13 +17,13 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "blockquote:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+          "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
           "label": "Quote",
           "required": true
         },
         {
           "component": "text",
-          "name": "blockquote:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
+          "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
           "label": "Author",
           "valueType": "string"
         }

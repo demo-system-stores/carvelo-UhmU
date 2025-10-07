@@ -181,7 +181,7 @@
           "id": "quote",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"quote\"><blockquote><div><p>Quotation</p></div><div><p>Author</p></div></blockquote></div>"
+              "unsafeHTML": "<div class=\"quote\"><div><div><p>Quotation</p></div></div><div><div><p>Author</p></div></div></div>"
             }
           }
         },
