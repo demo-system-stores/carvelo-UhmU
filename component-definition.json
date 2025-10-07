@@ -215,6 +215,15 @@
           }
         },
         {
+          "title": "Targeted Block",
+          "id": "targeted-block",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"targeted-block\"><div><div><p>Customer Groups</p></div><div><p>1</p></div></div><div><div><p>This content will be visible to logged in customer only</p></div></div></div>"
+            }
+          }
+        },
+        {
           "title": "Video",
           "id": "video",
           "plugins": {

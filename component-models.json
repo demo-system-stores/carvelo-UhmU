@@ -383,6 +383,17 @@
     ]
   },
   {
+    "id": "targeted-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
+        "label": "Customer Groups",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "video",
     "fields": [
       {
