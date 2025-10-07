@@ -181,9 +181,7 @@
           "id": "quote",
           "plugins": {
             "da": {
-              "name": "quote",
-              "rows": 1,
-              "columns": 1
+              "unsafeHTML": "<div class=\"quote\"><blockquote><div><p>Quotation</p></div><div><p></p></div></blockquote></div>"
             }
           }
         },
