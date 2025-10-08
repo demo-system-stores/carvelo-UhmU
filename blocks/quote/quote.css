@@ -4,7 +4,7 @@
   max-width: 900px;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .quote blockquote {
     padding: 0 32px;
   }
@@ -16,18 +16,31 @@
 
 .quote blockquote .quote-quotation > :first-child {
   text-indent: -0.5ch;
+  display: inline;
 }
 
-.quote blockquote .quote-quotation > p:last-of-type::before,
-.quote blockquote .quote-quotation > p:last-of-type::after {
+.quote blockquote .quote-quotation > p {
+  text-indent: -0.5ch;
+  display: inline;
+}
+
+main blockquote p::before,
+main blockquote p::after {
+  content: "";
+  display: inline;
+}
+
+.quote blockquote .quote-quotation::before,
+.quote blockquote .quote-quotation::after {
   line-height: 0;
+  display: inline;
 }
 
-.quote blockquote .quote-quotation > p:last-of-type::before {
+.quote blockquote .quote-quotation::before {
   content: "“";
 }
 
-.quote blockquote .quote-quotation > p:last-of-type::after {
+.quote blockquote .quote-quotation::after {
   content: "”";
 }
 
