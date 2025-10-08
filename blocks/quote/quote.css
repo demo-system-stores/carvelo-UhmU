@@ -4,7 +4,7 @@
   max-width: 900px;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .quote blockquote {
     padding: 0 32px;
   }
@@ -18,16 +18,16 @@
   text-indent: -0.5ch;
 }
 
-.quote blockquote .quote-quotation > :first-child::before,
-.quote blockquote .quote-quotation > :last-child::after {
+.quote blockquote .quote-quotation > p:last-of-type::before,
+.quote blockquote .quote-quotation > p:last-of-type::after {
   line-height: 0;
 }
 
-.quote blockquote .quote-quotation > :first-child::before {
+.quote blockquote .quote-quotation > p:last-of-type::before {
   content: "“";
 }
 
-.quote blockquote .quote-quotation > :last-child::after {
+.quote blockquote .quote-quotation > p:last-of-type::after {
   content: "”";
 }
 
