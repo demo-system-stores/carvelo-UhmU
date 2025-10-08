@@ -21,7 +21,7 @@
 
 .quote blockquote .quote-quotation > p {
   text-indent: -0.5ch;
-  display: inline !important;
+  display: inline;
 }
 
 main blockquote p::before,

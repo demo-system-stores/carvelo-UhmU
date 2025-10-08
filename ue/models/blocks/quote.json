@@ -15,7 +15,7 @@
       "id": "quote",
       "fields": [
         {
-          "component": "richtext",
+          "component": "text",
           "valueType": "string",
           "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
           "label": "Quote",
