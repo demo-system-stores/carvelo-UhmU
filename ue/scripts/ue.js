@@ -145,6 +145,10 @@ const setupUEEventHandlers = () => {
       }
     }
   });
+
+  document.addEventListener('aue:content-move', (event) => {
+    window.location.reload();
+  });
 };
 
 export default () => {
