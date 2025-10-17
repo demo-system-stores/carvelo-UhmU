@@ -18,6 +18,7 @@ import {
   initializeCommerce,
   applyTemplates,
   decorateLinks,
+  loadErrorPage,
 } from './commerce.js';
 
 /**
@@ -53,7 +54,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+    if (!main.querySelector('.hero')) buildHeroBlock(main);
   } catch (error) {
     console.error('Auto Blocking failed', error);
   }
@@ -82,10 +83,15 @@ async function loadEager(doc) {
 
   const main = doc.querySelector('main');
   if (main) {
-    await initializeCommerce();
-    decorateMain(main);
-    applyTemplates(doc);
-    await loadCommerceEager();
+    try {
+      await initializeCommerce();
+      decorateMain(main);
+      applyTemplates(doc);
+      await loadCommerceEager();
+    } catch (e) {
+      console.error('Error initializing commerce configuration:', e);
+      loadErrorPage(418);
+    }
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
@@ -134,6 +140,12 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+}
+
+// UE Editor support before page load
+if (window.location.hostname.includes('ue.da.live')) {
+  // eslint-disable-next-line import/no-unresolved
+  await import(`${window.hlx.codeBasePath}/ue/scripts/ue.js`).then(({ default: ue }) => ue());
 }
 
 loadPage();

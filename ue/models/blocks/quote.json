@@ -1,0 +1,34 @@
+{
+  "definitions": [
+    {
+      "title": "Quote",
+      "id": "quote",
+      "plugins": {
+        "da": {
+          "unsafeHTML": "<div class=\"quote\"><div><div><p>Quotation</p></div></div><div><div><p>Author</p></div></div></div>"
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "quote",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+          "label": "Quote",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+          "label": "Author",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
