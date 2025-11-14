@@ -151,13 +151,11 @@ export default async function decorate(block) {
 
           tryRenderAemAssetsImage(ctx, {
             alias: product.sku,
-            imageProps: {
-              ...defaultImageProps,
-              style: 'aspect-ratio: 1; object-fit: contain; height: auto;'
-            },
+            imageProps: defaultImageProps,
             wrapper: anchorWrapper,
             params: {
               width: defaultImageProps.width,
+              height: defaultImageProps.height,
             },
           });
         },
