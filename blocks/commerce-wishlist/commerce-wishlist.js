@@ -1,23 +1,21 @@
 import * as cartApi from '@dropins/storefront-cart/api.js';
 import * as pdpApi from '@dropins/storefront-pdp/api.js';
-import { getHeaders } from '@dropins/tools/lib/aem/configs.js';
 import { render as wishlistRenderer } from '@dropins/storefront-wishlist/render.js';
 import { render as authRenderer } from '@dropins/storefront-auth/render.js';
 import { AuthCombine } from '@dropins/storefront-auth/containers/AuthCombine.js';
 import { events } from '@dropins/tools/event-bus.js';
 import Wishlist from '@dropins/storefront-wishlist/containers/Wishlist.js';
 import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
-import { commerceEndpointWithQueryParams, rootLink } from '../../scripts/commerce.js';
-import '../../scripts/initializers/wishlist.js';
+import { CS_FETCH_GRAPHQL, rootLink, getProductLink } from '../../scripts/commerce.js';
 import { readBlockConfig } from '../../scripts/aem.js';
+
+import '../../scripts/initializers/wishlist.js';
+import '../../scripts/initializers/cart.js';
 
 // Initialize
 
-// Set Fetch Endpoint (Service)
-pdpApi.setEndpoint(await commerceEndpointWithQueryParams());
-
-// Set Fetch Headers (Service)
-pdpApi.setFetchGraphQlHeaders((prev) => ({ ...prev, ...getHeaders('cs') }));
+// Inherit Fetch GraphQL Instance (Catalog Service)
+pdpApi.setEndpoint(CS_FETCH_GRAPHQL);
 
 const WISHLIST_IMAGE_DIMENSIONS = {
   width: 288,
@@ -76,7 +74,7 @@ export default async function decorate(block) {
   await wishlistRenderer.render(Wishlist, {
     routeEmptyWishlistCTA: startShoppingURL ? () => rootLink(startShoppingURL) : undefined,
     moveProdToCart: cartApi.addProductsToCart,
-    routeProdDetailPage: (product) => rootLink(`/products/${product.urlKey}/${product.sku}`),
+    routeProdDetailPage: (product) => getProductLink(product.urlKey, product.sku),
     onLoginClick: showAuthModal,
     getProductData: pdpApi.getProductData,
     getRefinedProduct: pdpApi.getRefinedProduct,
