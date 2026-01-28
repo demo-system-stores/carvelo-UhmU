@@ -241,12 +241,59 @@
           }
         },
         {
+          "title": "Quote",
+          "id": "quote",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"quote\"><div><div><p>Quotation</p></div></div><div><div><p>Author</p></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Search",
+          "id": "search",
+          "plugins": {
+            "da": {
+              "name": "search",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Tabs Item",
+          "id": "tabs-item",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div><div><p></p></div><div></div></div>"
+            }
+          }
+        },
+        {
           "title": "Targeted Block",
           "id": "targeted-block",
           "model": "targeted-block",
           "plugins": {
             "da": {
               "type": "key-value-block"
+            }
+          }
+        },
+        {
+          "title": "Video",
+          "id": "video",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"video\"><div><div><p><a href=\"\">video</a></p><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div></div></div>"
             }
           }
         }
