@@ -243,38 +243,55 @@
         {
           "title": "Quote",
           "id": "quote",
+          "model": "quote",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"quote\"><div><div><p>Quotation</p></div></div><div><div><p>Author</p></div></div></div>"
-            }
-          }
-        },
-        {
-          "title": "Search",
-          "id": "search",
-          "plugins": {
-            "da": {
-              "name": "search",
+              "name": "quote",
               "rows": 1,
-              "columns": 1
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "quote",
+                  "selector": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)"
+                },
+                {
+                  "name": "author",
+                  "selector": "div:nth-child(2)>div:nth-child(1)>p:nth-child(1)"
+                }
+              ]
             }
           }
         },
         {
           "title": "Tabs",
           "id": "tabs",
+          "model": "tabs",
+          "filter": "tabs",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
+              "columns": 1,
+              "rows": 2
             }
           }
         },
         {
           "title": "Tabs Item",
           "id": "tabs-item",
+          "model": "tabs-item",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><div><p></p></div><div></div></div>"
+              "columns": 0,
+              "rows": 2,
+              "fields": [
+                {
+                  "name": "name",
+                  "selector": "div:nth-child(1)>p:nth-child(1)"
+                },
+                {
+                  "name": "content",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
             }
           }
         },
@@ -291,9 +308,26 @@
         {
           "title": "Video",
           "id": "video",
+          "model": "video",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"video\"><div><div><p><a href=\"\">video</a></p><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div></div></div>"
+              "name": "video",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "videoUrl",
+                  "selector": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]"
+                },
+                {
+                  "name": "videoUrlText",
+                  "selector": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)"
+                },
+                {
+                  "name": "posterImage",
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]"
+                }
+              ]
             }
           }
         }
@@ -307,6 +341,16 @@
           "title": "Product Recommendations",
           "id": "product-recommendations",
           "model": "product-recommendations",
+          "plugins": {
+            "da": {
+              "type": "key-value-block"
+            }
+          }
+        },
+        {
+          "title": "Product Teaser",
+          "id": "product-teaser",
+          "model": "product-teaser",
           "plugins": {
             "da": {
               "type": "key-value-block"

@@ -44,7 +44,16 @@
           "...": "../blocks/hero/_*.json#/definitions"
         },
         {
+          "...": "../blocks/quote/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/tabs/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/targeted-block/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/video/_*.json#/definitions"
         }
       ]
     },
