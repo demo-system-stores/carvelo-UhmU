@@ -17,7 +17,11 @@
       "image",
       "text",
       "targeted-block",
-      "product-recommendations"
+      "product-recommendations",
+      "product-teaser",
+      "quote",
+      "tabs",
+      "video"
     ]
   },
   {
