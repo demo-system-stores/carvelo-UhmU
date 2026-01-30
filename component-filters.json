@@ -14,13 +14,10 @@
       "carousel",
       "columns",
       "fragment",
-      "quote",
-      "tabs",
-      "video",
       "image",
       "text",
-      "product-recommendations",
-      "product-teaser"
+      "targeted-block",
+      "product-recommendations"
     ]
   },
   {

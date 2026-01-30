@@ -20,7 +20,7 @@ import { render as wishlistRender } from '@dropins/storefront-wishlist/render.js
 
 // Block-level
 import { readBlockConfig } from '../../scripts/aem.js';
-import { fetchPlaceholders, rootLink } from '../../scripts/commerce.js';
+import { fetchPlaceholders, getProductLink } from '../../scripts/commerce.js';
 
 // Initializers
 import '../../scripts/initializers/recommendations.js';
@@ -63,11 +63,14 @@ function getPurchaseHistory(storeViewCode) {
 export default async function decorate(block) {
   const labels = await fetchPlaceholders();
 
-  block.children[0].style.display = 'none';
-  block.children[1].style.display = 'none';
+  // Hide configuration rows if they exist
+  const children = [...block.children];
+  children.forEach((child) => {
+    child.style.display = 'none';
+  });
 
   // Configuration
-  let { currentsku, recid } = readBlockConfig(block);
+  const { currentsku, recid } = readBlockConfig(block);
 
   // Layout
   const fragment = document.createRange().createContextualFragment(`
@@ -114,7 +117,7 @@ export default async function decorate(block) {
     }
 
     const storeViewCode = getConfigValue('headers.cs.Magento-Store-View-Code');
-    const getProductLink = (item) => rootLink(`/products/${item.urlKey}/${item.sku}`);
+    const createProductLink = (item) => getProductLink(item.urlKey, item.sku);
 
     // Get product view history
     context.userViewHistory = getProductViewHistory(storeViewCode);
@@ -139,7 +142,7 @@ export default async function decorate(block) {
     try {
       await Promise.all([
         provider.render(ProductList, {
-          routeProduct: getProductLink,
+          routeProduct: createProductLink,
           recId: recid,
           currentSku: currentsku || context.currentSku,
           userViewHistory: context.userViewHistory,
@@ -187,7 +190,7 @@ export default async function decorate(block) {
                 UI.render(Button, {
                   children:
                     labels.Global?.SelectProductOptions,
-                  href: rootLink(`/products/${ctx.item.urlKey}/${ctx.item.sku}`),
+                  href: createProductLink(ctx.item),
                   variant: 'tertiary',
                 })(addToCart);
               }
@@ -210,7 +213,7 @@ export default async function decorate(block) {
             Thumbnail: (ctx) => {
               const { item, defaultImageProps } = ctx;
               const wrapper = document.createElement('a');
-              wrapper.href = getProductLink(item);
+              wrapper.href = createProductLink(item);
 
               tryRenderAemAssetsImage(ctx, {
                 alias: item.sku,
@@ -232,60 +235,6 @@ export default async function decorate(block) {
   }
 
   const context = {};
-
-  // Function to re-read block configuration and trigger refresh
-  function refreshBlockConfiguration() {
-    const newConfig = readBlockConfig(block);
-    const oldRecid = recid;
-    const oldCurrentsku = currentsku;
-
-    // Update configuration variables
-    currentsku = newConfig.currentsku;
-    recid = newConfig.recid;
-
-    // Check if significant configuration changes occurred
-    if (oldRecid !== recid || oldCurrentsku !== currentsku) {
-      // Update context with new configuration values
-      updateContext({
-        recId: recid,
-        currentSku: currentsku,
-      });
-    }
-  }
-
-  // Watch for DOM changes to configuration elements (for Universal Editor)
-  let configObserver;
-  if (window.location.hostname.includes('ue.da.live')) {
-    configObserver = new MutationObserver((mutations) => {
-      let configChanged = false;
-      mutations.forEach((mutation) => {
-        // Check if the mutation affects the configuration rows
-        if (mutation.type === 'childList' || mutation.type === 'characterData') {
-          const { target } = mutation;
-          // Check if the target is within a configuration row
-          if (target.closest && target.closest('.product-recommendations > div')) {
-            configChanged = true;
-          }
-        }
-      });
-
-      if (configChanged) {
-        // Debounce configuration refresh to avoid excessive calls
-        clearTimeout(loadTimeout);
-        loadTimeout = setTimeout(() => {
-          refreshBlockConfiguration();
-        }, 500); // 500ms debounce for config changes
-      }
-    });
-
-    // Start observing the block for configuration changes
-    configObserver.observe(block, {
-      childList: true,
-      subtree: true,
-      characterData: true,
-    });
-  }
-
   // Debounced loader to prevent excessive API calls
   function debouncedLoadRecommendation(forceReload = false) {
     if (loadTimeout) {
@@ -302,7 +251,7 @@ export default async function decorate(block) {
 
   function shouldReloadRecommendations(newContext) {
     // Check if significant context changes occurred that warrant reloading recommendations
-    const significantChanges = ['currentSku', 'pageType', 'category', 'recId'];
+    const significantChanges = ['currentSku', 'pageType', 'category'];
 
     return significantChanges.some(
       (key) => newContext[key] !== previousContext[key] && newContext[key] !== undefined,
@@ -350,31 +299,12 @@ export default async function decorate(block) {
     updateContext({ cartSkus });
   }
 
-  // Initialize context with current configuration
-  updateContext({
-    recId: recid,
-    currentSku: currentsku,
-  });
-
   window.adobeDataLayer.push((dl) => {
     dl.addEventListener('adobeDataLayer:change', handlePageTypeChanges, { path: 'pageContext' });
     dl.addEventListener('adobeDataLayer:change', handleProductChanges, { path: 'productContext' });
     dl.addEventListener('adobeDataLayer:change', handleCategoryChanges, { path: 'categoryContext' });
     dl.addEventListener('adobeDataLayer:change', handleCartChanges, { path: 'shoppingCartContext' });
   });
-
-  // Cleanup function to disconnect observer when block is removed
-  const cleanupObserver = () => {
-    if (configObserver) {
-      configObserver.disconnect();
-    }
-  };
-
-  // Listen for when the block might be removed or page unloaded
-  window.addEventListener('beforeunload', cleanupObserver);
-
-  // Store cleanup function on the block element for potential external cleanup
-  block._cleanup = cleanupObserver;
 
   if (isMobile) {
     const section = block.closest('.section');
