@@ -1,5 +1,20 @@
+/********************************************************************
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2026 Adobe
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe and its suppliers, if any. The intellectual
+ * and technical concepts contained herein are proprietary to Adobe
+ * and its suppliers and are protected by all applicable intellectual
+ * property laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe.
+ *******************************************************************/
 import { UserAddressesProps } from '..';
-
 export interface PaymentMethodProps {
     name: string;
 }
@@ -47,6 +62,7 @@ export interface TotalProps {
     subtotal_incl_tax: AmountProps;
 }
 export interface OrderProps {
+    admin_assisted_order?: number | null;
     token: string;
     email: string;
     shipping_method: string;
@@ -96,4 +112,3 @@ export interface OrderHistoryListResponse {
         message: string;
     }[];
 }
-//# sourceMappingURL=getOrderHistoryList.types.d.ts.map

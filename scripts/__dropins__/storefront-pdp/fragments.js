@@ -14,6 +14,7 @@ fragment PRODUCT_OPTION_FRAGMENT on ProductViewOption {
       ... on ProductViewOptionValueProduct {
         title
         quantity
+        canEditQuantity
         isDefault
         __typename
         product {
@@ -106,6 +107,17 @@ fragment PRODUCT_FRAGMENT on ProductView {
     label
     roles
   }
+
+  videos {
+		description
+		url
+		title
+		preview {
+			label
+			roles
+			url
+		}
+	}
 
   attributes(roles: []) {
     name
