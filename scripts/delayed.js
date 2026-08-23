@@ -67,9 +67,3 @@ if (document.prerendering) {
 }
 
 // add delayed functionality here
-
-// Auto-initialize site switcher for footers
-import('../blocks/siteswitcher/siteswitcher.js');
-
-// Custom search no-results handler
-import('./custom-search-no-results.js');
